@@ -1,0 +1,11 @@
+<:DOCTYPE html >
+くhtml>くhead>くtitle>Probando IFRAMESく/title></head>
+くbody>
+Frame l
+<iframe width="300" height="250" src="http://WW.mecd.gob.es/porta―
+da―mecd/" frameborder="1" scrolling="yes" id="framel"> </iframe>
+Frame 2
+<iframe width="500‖ height="350" src="http://www.mecd.gob.es/por―
+tada-mecd/"" frameborder="2" scrolling="no" id="fralne2"> </iframe>
+</body>
+</html> 
