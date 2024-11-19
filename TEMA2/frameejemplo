@@ -1,0 +1,9 @@
+<:DOCTYPE html >
+くhtml>くhead>くtitle>Probando IFRAMESく/title></head>
+くbody>
+Frame l
+<iframe width="300" height="250" src="https://calendar.google.com/calendar/u/0/r?pli=1" frameborder="1" scrolling="yes" id="framel"> </iframe>
+Frame 2
+<iframe width="500‖ height="350" src="https://www.andaluciagym.com" frameborder="2" scrolling="no" id="fralne2"> </iframe>
+</body>
+</html>
