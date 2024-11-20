@@ -1,0 +1,9 @@
+<h3 align="center">selecciona eI tipo de Deporte </h3>
+<form action="">
+<p align="center">
+<input type="radio" name="Deporte" value=" GIMNASIA">Gimnasia
+<input type="radio" name="Deporte" value="FUTBOL">Futbol
+<input type="radio" name="Deporte" value="BALONCESTO">Baloncesto
+<input type="radio" name="Deporte" value="PADEL">Padel
+<p>
+</form>
