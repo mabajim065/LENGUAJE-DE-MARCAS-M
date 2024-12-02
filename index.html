@@ -1,76 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body >
+    <title>Página Web María Abascal Jiménez</title>
     <style>
-         body {
+        /* Estilos Generales */
+        body {
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            font-family: Georgia, serif;
-            background-color: #f0f0f0; 
-            color: rgb(255, 115, 192);
+            background-color: #f1f1f1;  /* Gris muy claro */
+            color: #333;
+            background-image: url('D:/LENGUAJE DE MARCAS M/TEMA2/EJERCICIO IMAGEN/birthday princess(4).png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-
+        /* Encabezado */
         header {
-            background-color: rgb(73, 73, 73);
-            color: rgb(255, 115, 192);
-            padding: 20px;
+            background-color: rgba(143, 125, 127, 0.7);  /* Gris suave con opacidad */
+            color: #f0a6ca;  /* Rosa suave */
+            padding: 20px 0;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
+            font-size: 36px;
             margin: 0;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
+        /* Navegación */
         nav {
-            background-color: rgb(73, 73, 73);
-            padding: 15px 0;
-             margin: 0;
-            gap: 20px;
+            background-color: rgba(143, 125, 127, 0.7);  /* Gris suave con opacidad */
+            color: #f0a6ca;  /* Rosa suave */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: #f0a6ca;  /* Rosa suave */
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        nav li:hover {
+            transform: scale(1.1);
+            background-color: #ff95c8;  /* Rosa suave al pasar el ratón */
+            border-radius: 5px;
+        }
+
+        nav li a:hover {
+            color: #fff;  /* Cambia el color a blanco en hover */
+            text-shadow: 0 0 8px rgba(240, 166, 202, 0.8);  /* Resplandor rosado */
+        }
+
+        /* Sección de contenido */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad para que se vea el fondo rosa */
+            margin-top: 40px;
+            border-radius: 10px;
         }
 
         h2 {
-            font-size: 1.5rem;
-            margin: 10px 0;
-            text-align: center;
+            font-size: 20px;
+            color: #f0a6ca;  /* Rosa suave */
+            margin-top: 0;
         }
 
-      
-        li {
-            font-size: 1rem;
-            margin: 0;
-            text-align: center;
-        }
+        /* Imágenes */
         img {
-            align:center;
             width: 100%;
-            height: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
     </style>
+</head>
+<body>
+
 <header>
-    <h1>PAGINA WEB MARÍA ABASCAL JIMÉNEZ</h1>
+    <h1>Página Web María Abascal Jiménez</h1>
 </header>
-<br>
-<br>
+
 <nav>
     <ul>
-       <li><a href="TEMA1.html"><h2>TEMA 1</h2></a></li>
-<br>
-       <li><a href="tema2fuera.html"><h2>TEMA 2</h2></a></li>
-<br>
+        <li><a href="TEMA1.html"><h2>TEMA 1</h2></a></li>
+        <li><a href="TEMA2.html"><h2>TEMA 2</h2></a></li>
     </ul>
 </nav>
-<main>
-    <img src="TEMA2/EJERCICIO IMAGEN/birthday princess(4).png" >
-</main>
+
+<section>
+    <img src="D:/LENGUAJE DE MARCAS M/TEMA2/EJERCICIO IMAGEN/birthday princess(4).png" alt="Imagen Principal">
+</section>
 
 </body>
 </html>
