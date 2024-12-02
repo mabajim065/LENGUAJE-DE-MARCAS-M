@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body >
+    <title>Página Web María Abascal Jiménez</title>
     <style>
-         body {
+        /* Estilos Generales */
+        body {
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;  /* Gris muy claro */
+            background-image: url('D:/LENGUAJE DE MARCAS M/TEMA2/EJERCICIO IMAGEN/birthday princess(4).png');
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
             color: #333;
         }
-        
+
+        /* Encabezado */
         header {
-            background-color: #8f7d7f;  /* Gris suave */
-            color: #f882bb;  /* Rosa suave */
+            background-color: rgba(143, 125, 127, 0.7);  /* Gris suave con opacidad */
+            color: #f0a6ca;  /* Rosa suave */
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -28,9 +31,10 @@
             margin: 0;
         }
 
+        /* Navegación */
         nav {
-            background-color: #8f7d7f;  /* Gris suave */
-            color: #f389bc;  /* Rosa suave */
+            background-color: rgba(143, 125, 127, 0.7);  /* Gris suave con opacidad */
+            color: #f0a6ca;  /* Rosa suave */
             text-align: center;
             padding: 10px 0;
         }
@@ -49,7 +53,7 @@
 
         nav li a {
             text-decoration: none;
-            color: #f0a6ca;  
+            color: #f0a6ca;  /* Rosa suave */
             font-size: 22px;
             font-weight: bold;
             text-transform: uppercase;
@@ -58,7 +62,7 @@
 
         nav li:hover {
             transform: scale(1.1);
-            background-color: #fda9f9;  /* Rosa suave al pasar el ratón */
+            background-color: #ff95c8;  /* Rosa suave al pasar el ratón */
             border-radius: 5px;
         }
 
@@ -67,12 +71,13 @@
             text-shadow: 0 0 8px rgba(240, 166, 202, 0.8);  /* Resplandor rosado */
         }
 
-        img {
-            width: 100%;
-            height: auto;
-            margin-top: 20px;
+        /* Sección de contenido */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad para que se vea el fondo rosa */
+            margin-top: 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
@@ -81,28 +86,33 @@
             margin-top: 0;
         }
 
-        /* Espaciado entre el contenido */
-        section {
-            padding: 40px 20px;
-            text-align: center;
+        /* Imágenes */
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
     </style>
+</head>
+<body>
+
 <header>
-    <h1>PAGINA WEB MARÍA ABASCAL JIMÉNEZ</h1>
+    <h1>Página Web María Abascal Jiménez</h1>
 </header>
-<br>
-<br>
+
 <nav>
     <ul>
-       <li><a href="TEMA1.html"><h2>TEMA 1</h2></a></li>
-<br>
-       <li><a href="tema2fuera.html"><h2>TEMA 2</h2></a></li>
-<br>
+        <li><a href="TEMA1.html"><h2>TEMA 1</h2></a></li>
+        <li><a href="TEMA2.html"><h2>TEMA 2</h2></a></li>
     </ul>
 </nav>
-<main>
-    <img src="TEMA2/EJERCICIO IMAGEN/birthday princess(4).png" >
-</main>
+
+<section>
+    <img src="D:/LENGUAJE DE MARCAS M/TEMA2/EJERCICIO IMAGEN/birthday princess(4).png" alt="Imagen Principal">
+</section>
 
 </body>
 </html>
+
