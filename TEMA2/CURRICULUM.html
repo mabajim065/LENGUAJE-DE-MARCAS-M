@@ -16,27 +16,33 @@
 
         /* Estilos para el encabezado */
         header {
-            text-align: center;
+            display: flex;
+            align-items: center;
             background-color: #ff8fa3;
             color: white;
             padding: 20px 0;
+            justify-content: center;
+        }
+
+        .photo {
+            margin-right: 20px;
         }
 
         header .photo img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            
         }
 
         header h1 {
             font-size: 2.5rem;
-            margin-top: 10px;
+            margin: 0;
         }
 
         header p {
             font-size: 1.2rem;
             font-style: italic;
+            margin-top: 5px;
         }
 
         /* Estilos para el contenedor del CV */
@@ -69,12 +75,14 @@
         }
 
         /* Estilos para la experiencia laboral y idiomas */
-        .esperiencia h2{
+        .esperiencia h2 {
             color: #ffffff;
         }
+
         .idiomas p {
             color: #000000;
         }
+
         .esperiencia p, .idiomas p {
             font-size: 1rem;
             margin: 5px 0;
@@ -102,8 +110,10 @@
         <div class="photo">
             <img src="C:\Users\DAW\Downloads\1733299022597.jpg" alt="foto">
         </div>
-        <h1>MARÍA ABASCAL</h1>
-        <p>Desarrolladora Web</p>
+        <div>
+            <h1>MARÍA ABASCAL</h1>
+            <p>Desarrolladora Web</p>
+        </div>
     </header>
 
     <div class="cv-container">
@@ -132,15 +142,15 @@
 
         <main class="main-content">
             <section class="cv-section">
-                <h2> EXPERIENCIA LABORAL</h2>
-                <div class="esperiencia"> 
+                <h2>EXPERIENCIA LABORAL</h2>
+                <div class="esperiencia">
                     <h2>ENTRENADORA GR (2010-2015)</h2>
                     <p>En el club gimnasia y estética Alcanatif</p>
                 </div>
             </section>
 
             <section class="cv-section">
-                <h2> IDIOMAS</h2>
+                <h2>IDIOMAS</h2>
                 <div class="idiomas">
                     <p>Español</p>
                     <p>Inglés (B1)</p>
