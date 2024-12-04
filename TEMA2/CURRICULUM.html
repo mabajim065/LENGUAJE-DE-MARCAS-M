@@ -3,10 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currículum de María Abascal</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f3f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            text-align: center;
+            background-color: #ff8fa3;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-top: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Estilos para el contenedor del CV */
+        .cv-container {
+            display: flex;
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para la sección lateral */
+        .cv-aside {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .cv-section h2 {
+            background-color: #ff6c84;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .cv-section p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        /* Estilos para la experiencia laboral y idiomas */
+        .esperiencia h2{
+            color: #ffffff;
+        }
+        .idiomas p {
+            color: #000000;
+        }
+        .esperiencia p, .idiomas p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        /* Estilos para el contenido principal */
+        .main-content {
+            flex: 2;
+        }
+
+        .cv-section {
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los enlaces */
+        a {
+            text-decoration: none;
+            color: #ff6c84;
+        }
+    </style>
 </head>
 <body>
-    /* Estilos para el encabezado , con la foto y el nombre mio */
+    <!-- Estilos para el encabezado, con la foto y el nombre -->
     <header>
         <div class="photo">
             <img src="C:\Users\DAW\Downloads\1733299022597.jpg" alt="foto">
@@ -14,43 +105,49 @@
         <h1>MARÍA ABASCAL</h1>
         <p>Desarrolladora Web</p>
     </header>
-        <div class=" cv-container">
-            <aside class="cv-aside">
-                <section class="cv-section">
-                    <h2>FORMACIÓN ACADÉMICA</h2>
-                    <p>Bachillerato tecnologico</p>
-                    <p>2006-2008</p>
-                    <p>Grado superior desarrollador de aplicaciones web</p>
-                    <p>2009-2011</p>
-                    <p>curso entrenador gimnasia ritmica nivel 1</p>
-                    <p>2011-2012</p>
-                    <p>curso entrenador gimnasia ritmica nivel 2</p>
-                    <p>2012-2013</p>
-                    <p>curso entrenador gimnasia ritmica nivel 3</p>
-                    <p>2013-2014</p>
-                </section>
-                <section>
-                    <h2>DATOS A CONOCER</h2>
-                    <p>Carnet de conducir de coche</p>
-                    <p>carnet de conducir de motocicleta</p>
-                    <p>coche propio</p>
-                    <p>disponibilidad de servicios</p>
-                </section>
-            </aside>
-            <main class="main-content"></main>
+
+    <div class="cv-container">
+        <aside class="cv-aside">
+            <section class="cv-section">
+                <h2>FORMACIÓN ACADÉMICA</h2>
+                <p>Bachillerato tecnológico</p>
+                <p>2006-2008</p>
+                <p>Grado superior desarrollador de aplicaciones web</p>
+                <p>2009-2011</p>
+                <p>Curso entrenador gimnasia rítmica nivel 1</p>
+                <p>2011-2012</p>
+                <p>Curso entrenador gimnasia rítmica nivel 2</p>
+                <p>2012-2013</p>
+                <p>Curso entrenador gimnasia rítmica nivel 3</p>
+                <p>2013-2014</p>
+            </section>
+            <section>
+                <h2>DATOS A CONOCER</h2>
+                <p>Carnet de conducir de coche</p>
+                <p>Carnet de conducir de motocicleta</p>
+                <p>Coche propio</p>
+                <p>Disponibilidad de servicios</p>
+            </section>
+        </aside>
+
+        <main class="main-content">
             <section class="cv-section">
                 <h2> EXPERIENCIA LABORAL</h2>
-                    <div class="esperiencia"> 
-                        <h2>ENTRENADORA GR (2010-2015)</h2>
-                        <p>en el club gimnasia y estetica Alcanatif</p>
-                    </div>
-                <h2> IDIOMAS</h2>
-                <div class="idiomas">
-                    <p> Español</p>
-                    <p> Ingles (b1)</p
+                <div class="esperiencia"> 
+                    <h2>ENTRENADORA GR (2010-2015)</h2>
+                    <p>En el club gimnasia y estética Alcanatif</p>
                 </div>
             </section>
-        </div>
-    
+
+            <section class="cv-section">
+                <h2> IDIOMAS</h2>
+                <div class="idiomas">
+                    <p>Español</p>
+                    <p>Inglés (B1)</p>
+                </div>
+            </section>
+        </main>
+    </div>
 
 </body>
+</html>
