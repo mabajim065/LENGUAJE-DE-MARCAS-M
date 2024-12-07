@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículum de María Abascal</title>
     <style>
-     
+        /* Estilos del currículum */
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f3f8;
@@ -13,10 +13,9 @@
             margin: 0;
             padding: 0;
             width: 900px;
-            height: 900px;
-            margin-left: 550px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
         header {
             display: flex;
             align-items: center;
@@ -26,30 +25,15 @@
             justify-content: center;
             border-radius: 10px;
         }
-
-        .photo {
-            margin-right: 20px;
-
-        }
-
-        header .photo img {
+        .photo img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
         }
-
         header h1 {
             font-size: 2.5rem;
             margin: 0;
         }
-
-        header p {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-top: 5px;
-        }
-
-      
         .cv-container {
             display: flex;
             padding: 20px;
@@ -58,52 +42,22 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
- 
         .cv-aside {
             flex: 1;
             margin-right: 20px;
         }
-
+        .main-content {
+            flex: 2;
+        }
+        .cv-section {
+            margin-bottom: 20px;
+        }
         .cv-section h2 {
             background-color: #ff6c84;
             color: white;
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
-        }
-
-        .cv-section p {
-            margin: 5px 0;
-            line-height: 1.6;
-        }
-
-        .esperiencia h2 {
-            color: #ffffff;
-        }
-
-        .idiomas p {
-            color: #000000;
-        }
-
-        .esperiencia p, .idiomas p {
-            font-size: 1rem;
-            margin: 5px 0;
-        }
-
-       
-        .main-content {
-            flex: 2;
-        }
-
-        .cv-section {
-            margin-bottom: 20px;
-        }
-
-       
-        a {
-            text-decoration: none;
-            color: #ff6c84;
         }
         footer {
             background-color: #ff6c84;
@@ -112,12 +66,15 @@
             text-align: center;
             margin-top: 20px;
             border-radius: 10px;
+        }
+        iframe {
+            border: none;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <!-- Estilos para el encabezado, con la foto y el nombre -->
     <header>
         <div class="photo">
             <img src="fotoyo.png" alt="foto">
@@ -134,49 +91,40 @@
                 <h2>FORMACIÓN ACADÉMICA</h2>
                 <p>Bachillerato tecnológico</p>
                 <p>2006-2008</p>
-                <p>Grado superior desarrollador de aplicaciones web</p>
-                <p>2009-2011</p>
-                <p>Curso entrenador gimnasia rítmica nivel 1</p>
-                <p>2011-2012</p>
-                <p>Curso entrenador gimnasia rítmica nivel 2</p>
-                <p>2012-2013</p>
-                <p>Curso entrenador gimnasia rítmica nivel 3</p>
-                <p>2013-2014</p>
-            </section>
-            <section>
-                <h2>DATOS A CONOCER</h2>
-                <p>Carnet de conducir de coche</p>
-                        <p>Carnet de conducir de motocicleta</p>
-                        <p>Coche propio</p>
-                <p>Disponibilidad de servicios</p>
+                <!-- Más contenido aquí -->
             </section>
         </aside>
 
         <main class="main-content">
             <section class="cv-section">
                 <h2>EXPERIENCIA LABORAL</h2>
-                <div class="esperiencia">
-                    <h2>ENTRENADORA GR (2010-2015)</h2>
-                    <p>En el club gimnasia y estética Alcanatif</p>
-                </div>
+                <p>Entrenadora en Club Gimnasia y Estética Alcanatif (2010-2015)</p>
             </section>
 
             <section class="cv-section">
-                <h2>IDIOMAS</h2>
-                <div class="idiomas">
-                    <p>Español</p>
-                    <p>Inglés (B1)</p>
-                </div>
+                <h2>Video de Presentación</h2>
+                <iframe width="560" height="315" 
+                    src="https://youtu.be/lbiRFIeHfSE?si=JoV-1qjD05GfMW-l" 
+                    title="cancion fondo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+
+            <section class="cv-section">
+                <h2>Ubicación</h2>
+                <iframe 
+                    src="https://maps.app.goo.gl/BnEznubHeirQLxMfA" 
+                    width="600" 
+                    height="450" 
+                    loading="lazy">
+                </iframe>
             </section>
         </main>
     </div>
+
     <footer>
-        <h2>&copy; CONTACTO</h2>
-        <p>📞673-47-24-59</p>
-        <p>💌maraabascal06@gmail.com</p>
-        <p>🤳 @mariaajiimenez_</p>
-
+        <p>&copy; Contacto: mariaabascal06@gmail.com</p>
     </footer>
-
 </body>
 </html>
