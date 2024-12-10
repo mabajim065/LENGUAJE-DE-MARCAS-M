@@ -1,0 +1,38 @@
+h1 {
+    color: rgb(255, 115, 192);
+    font-family: Georgia;
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    color: rgb(255, 114, 185);
+    font-family: Georgia;
+    font-size: 20px;
+    text-align: center;
+}
+div{
+    border: 2px solid rgb(255, 92, 201);
+    background: #ff8ccb;
+    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
+    max-width: 500px;
+    margin: auto;
+}
+div:hover{
+    transform: scale(1.1);
+    background: #ff8ccb;
+}   
+h3 {
+    color: rgb(255, 110, 183);
+    font-family: Georgia;
+    font-size: 20px;
+    text-align: center;
+}   
+li {
+    color: rgba(68, 34, 255, 0.719);
+    font-family: Georgia;
+    font-size: 20px;
+    text-align: center;
+}
+body{
+    background-color: rgb(73, 73, 73);
+}
