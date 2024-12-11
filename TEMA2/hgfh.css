@@ -1,17 +1,11 @@
-/* General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, black;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-areas:
-        "cabecera cabecera cabecera"
-        "menu principal secundario"
-        "menu publicidad secundario"
-        "pie pie pie";
-    grid-template-columns: 1fr 2fr 3fr;
-    grid-gap: 1em; /* Espacio entre áreas */
-    padding: 1em;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1.4em; /*  interlineado de todo*/
+    padding: 0.9em;
     box-sizing: border-box;
 }
 
@@ -19,7 +13,7 @@ body {
 #cabecera {
     grid-area: cabecera;
     padding: 1em; /* Relleno de 1em */
-    border-bottom: 2px solid #a5a1a1;
+    border-bottom: 2px solid #ccc;
     text-align: center;
 }
 
@@ -29,20 +23,20 @@ body {
     padding: 0.5em; /* Relleno de 0.5em */
     margin-bottom: 0.5em; /* Margen inferior de 0.5em */
     background-color: #f4f4f4;
-    border: 1px solid #a5a4a4;
+    border: 1px solid #ccc;
 }
 
 /* Noticias y secciones */
-#noticias, #publicidad {
+#NOTICIAS, #publicidad {
     padding: 0.5em;
-    margin-top: 1em; /* Separación */
+    margin-top: 1em; /* Separación entre bloques */
 }
 
 /* Publicidad */
 #publicidad {
     margin-top: 1em; /* Separación de 1em del elemento superior */
     background-color: #f9f9f9;
-    border: 1px solid #818181;
+    border: 1px solid #ccc;
 }
 
 /* Estilo para el contenido principal */
@@ -55,7 +49,8 @@ body {
 
 /* Artículos */
 .articulo {
-    margin-bottom: 1em; /* Separación de 1em entre artículos */
+    margin-bottom: 1.2em; /* Separación de 1em entre artículos */
+    margin-bottom: 0.3em;
 }
 
 .articulo img {
@@ -69,7 +64,7 @@ body {
     grid-area: secundario;
     padding: 0.5em;
     background-color: #f9f9f9;
-    border: 1px solid #CC6600;
+    border: 1px solid #ccc;
 }
 
 /* Estilo para el pie de página */
