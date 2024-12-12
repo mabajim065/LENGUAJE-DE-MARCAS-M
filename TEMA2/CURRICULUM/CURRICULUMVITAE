@@ -1,0 +1,61 @@
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currículum de María Abascal</title> 
+<div>
+    <div>
+        <div class="photo">
+            <img src="fotoyo.png" alt="foto">
+        </div>
+        <div>
+            <h1>MARÍA ABASCAL</h1>
+            <p>Curriculum Vitae</p>
+        </div>
+    </div>
+    <div class="cv-container">
+        <div class="DATOS">
+            <div class="formacionacademica">
+                <h2>FORMACIÓN ACADÉMICA</h2>
+                <p>Bachillerato tecnológico</p>
+                <p>2022-2024</p>
+                <p>Grado superior desarrollador de aplicaciones web</p>
+                <p>2024-2026</p>
+                <p>Curso entrenador gimnasia rítmica nivel 1</p>
+                <p>2025</p>
+            </div>
+            <div class="datosinteresantes">
+                <h2>DATOS INTERESANTES</h2>
+                <p>Carnet de conducir tipo B</p>
+                <p>Federada en Gimnasia Ritmica desde 2009</p>
+            </div>
+        </div>
+
+        <div class="experiencia">
+            <div class="experiencialaboral">
+                <h2>EXPERIENCIA LABORAL</h2>
+                <div class="esperiencia">
+                    <h2>ENTRENADORA GR (Actualmente)</h2>
+                    <p>Actualmente soy entrenadora de gimnasia rítmica en el club gimnasia y estética Alcanatif , y a su vez gimnasta Federada</p>
+                </div>
+            </div>
+            <div class="datospersonales">
+                <h2>DATOS PERSONALES</h2>
+                <p>Número de teléfono: 673-47-24-59</p>
+                <p>Email: maraabascal06@gmail.com</p>
+                <p> Redes sociales: @mariaajiimenez_ </p>
+            </div>
+            <div class="idiomas">
+                <h2>IDIOMAS</h2>
+                <div>
+                    <p>Español</p>
+                    <p>Inglés (B1)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
