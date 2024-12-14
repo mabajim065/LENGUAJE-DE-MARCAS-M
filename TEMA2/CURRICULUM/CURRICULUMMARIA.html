@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Elegante</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+            color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cv-container {
+            background-color: #252a34;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 900px;
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ff6c84;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-info h1 {
+            font-size: 2.4rem;
+            margin: 0;
+            color: #ff6c84;
+        }
+
+        .header-info p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin: 5px 0 0 0;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6c84;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ff6c84;
+        }
+
+        .section div {
+            background-color: #2d3440;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .section div:hover {
+            transform: translateY(-5px);
+            background-color: #374150;
+        }
+
+        .section p, .section ul {
+            margin: 0;
+            color: #ddd;
+        }
+
+        .section ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        .section ul li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+
+        .section ul li::before {
+            content: '\2022';
+            position: absolute;
+            left: 0;
+            color: #ff6c84;
+        }
+
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #444;
+            padding-top: 15px;
+            margin-top: 30px;
+            width: 100%;
+            position: relative;
+            left: 0;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .header-info h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="photo">
+                <img src="TEMA2\CURRICULUM\1734171595019.jpg" alt="Foto de María Abascal">
+            </div>
+            <div class="header-info">
+                <h1>María Abascal Jiménez</h1>
+                <p>Curriculum Vitae</p>
+            </div>
+        </div>
+
+        <!-- Content in Two Columns -->
+        <div class="content">
+            <!-- Contact Section -->
+            <div class="section">
+                <h2>Contacto</h2>
+                <div class="contact-info">
+                    <p>Teléfono : 673 47 24 59</p>
+                    <p>Correo: mariaabascal06@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="section">
+                <h2>Idiomas</h2>
+                <div class="languages">
+                    <p>Español: Nativo</p>
+                    <p>Inglés: Titulo B1 Cambrige</p>
+                </div>
+            </div>
+
+            <!-- Personal Info Section -->
+            <div class="section">
+                <h2>Información Personal</h2>
+                <div>
+                    <p>Nombre: María Abascal Jiménez</p>
+                    <p>Fecha de nacimiento: 31/03/2006</p>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section">
+                <h2>Experiencia Laboral</h2>
+                <div>
+                    <p>Entrenadora Gimnasia Ritmica: Club Gimnasia y Estetica Alcanatif (Actualmente)</p>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section">
+                <h2>Formación Académica</h2>
+                <div>
+                    <p>Estudios Actuales: FP superior de Desarrollo de Aplicaciones Web - IES Mar de Cádiz</p>
+                    <ul>
+                        <li>Configuración y gestión de sistemas informáticos.</li>
+                        <li>Administración de servidores y bases de datos.</li>
+                        <li>Aplicación de medidas de seguridad en sistemas y servicios.</li>
+                        <li>Desarrollo de aplicaciones web con acceso a datos.</li>
+                    </ul>
+                    <p>Estudios Anteriores: Bachillerato tecnológico - IES Safa San Luis Gonzaga</p>
+                </div>
+            </div>
+
+            <!-- Sports Section -->
+            <div class="section">
+                <h2>Formación Deportiva</h2>
+                <div>
+                    <p>Actualmente Federada en Gimnasia Rítmica</p>
+                    <ul>
+                        <li>Categoria Senior/Juvenil Precopa</li>
+                    </ul>
+                    <p>Títulos Deportivos:</p>
+                    <ul>
+                        <li>2º de Andalucia, Senior 2024 precopa</li>
+                        <li>3º en el Campeonato de conjuntos andaluz, senior 2022 precopa</li>
+                        <li>3º de Andalucia, senior 2022 precopa</li>
+                        <li>2º de Andalucia, Senior 2021 precopa</li>
+                        <li>1º de Andalucia, junior 2020 promesa</li>
+                        <li>3º de Andalucia, infantil 2018 promesa</li>
+                        <li>3º de Andalucia, infantil 2017 promesa</li>
+                        <li>3º de Andalucia, benjamin 2015 promesa</li>
+                        <li>2º de Andalucia, prebenjamin 2014 promesa</li>
+                        <li>1º de Andalucia, prebenjamin 2013 promesa</li>
+                        <li>1º de Andalucia, premini 2013 promesa</li>
+                    </ul>
+                </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 María Abascal Jiménez</p>
+        </div>
+    </div>
+</body>
+</html>
