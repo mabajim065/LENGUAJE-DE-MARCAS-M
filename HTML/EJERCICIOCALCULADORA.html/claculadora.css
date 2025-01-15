@@ -1,0 +1,30 @@
+* {
+    /* Reset CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+   
+}
+
+.container {
+    padding: 0px;
+    height: 60vh;
+    width: 60vw;
+    border-radius: 60px;
+    background-color: #eeeeee;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+
+}
+
+.item {
+    background: #E06A83;
+    border-radius: 1rem;
+    color: #fff;
+    display: grid;
+    place-items: center;
+}
