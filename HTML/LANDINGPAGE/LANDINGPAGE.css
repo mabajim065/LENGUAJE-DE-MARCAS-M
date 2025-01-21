@@ -1,0 +1,289 @@
+:root{
+    --verde-c: #45893e;  /* Verde como color principal */
+    --rosita-c: #ffdfe3;  /* Rosa claro como color secundario */
+    --azul-c: #012140;  /* Azul oscuro como color de contraste */
+    --border-r: .3rem; /* Bordes suaves */
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/** Estilos Generales **/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--rosita-c); /* Fondo suave con rosita */
+    color: var(--azul-c); /* Texto principal en azul oscuro */
+    line-height: 1.6;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--azul-c); /* Azul oscuro para el texto */
+}
+
+a {
+    text-decoration: none;
+    color: var(--verde-c); /* Verde para los enlaces */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--azul-c); /* Azul en hover para enlaces */
+}
+
+ul, li {
+    list-style: none;
+}
+
+.wrap-cta {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.cta-a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    background-color: var(--verde-c); /* Verde para el CTA */
+    padding: 1rem 2rem;
+    border-radius: var(--border-r);
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-a:hover {
+    background-color: #3b7a2a; /* Verde más oscuro en hover */
+    transform: scale(1.05); /* Efecto de aumento en hover */
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--verde-c); /* Verde para el título principal */
+    text-align: center;
+    margin: 2rem 0;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--verde-c); /* Verde para subtítulos */
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--azul-c);
+}
+
+/** Header **/
+
+.header-landing {
+    display: flex;
+    justify-content: center;
+    background: var(--verde-c); /* Verde como fondo del header */
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.logo-header {
+    max-width: 45px;
+    height: auto;
+}
+
+/** Hero Section **/
+
+.hero-section {
+    height: 80vh;
+    background: url(img/img-hero-agencia.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Sombra sutil sobre la imagen */
+}
+
+.wrap-hero-section {
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejorar la legibilidad */
+    padding: 2rem;
+    border-radius: var(--border-r);
+}
+
+.wrap-hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.wrap-hero-section p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+/** Logo Brand Section **/
+
+.section {
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.section h2 {
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: var(--azul-c);
+}
+
+.wrap-logos-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.logo-brand {
+    width: 200px;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+}
+
+.logo-brand:hover {
+    filter: grayscale(0);
+}
+
+/** Servicios Section **/
+
+.wrap-servicios-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.item-servicios-section {
+    padding: 1.5rem;
+    background-color: var(--rosita-c); /* Rosa claro como fondo */
+    border-radius: var(--border-r);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.item-servicios-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.item-servicios-section img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-r);
+}
+
+/** Two Columns Section **/
+
+.wrap-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap-img_two-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.wrap-text-column h3 {
+    color: var(--verde-c); /* Verde para los subtítulos importantes */
+    font-size: 2.5rem;
+}
+
+.wrap-text-column p {
+    color: var(--azul-c);
+    font-size: 1.1rem;
+}
+
+/** Form Section **/
+
+section.two-column-section.form {
+    background-color: var(--rosita-c); /* Fondo suave rosa para el formulario */
+    padding: 4rem 0;
+}
+
+.form input, .form textarea {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    line-height: 1.75rem;
+    border: 1.5px solid var(--azul-c); /* Azul para los bordes */
+    border-radius: var(--border-r);
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.form input:focus, .form textarea:focus {
+    border-color: var(--verde-c); /* Verde en focus */
+    outline: none;
+}
+
+input[type="submit"] {
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    background-color: var(--verde-c); /* Verde para el botón */
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: var(--border-r);
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3b7a2a; /* Verde más oscuro en hover */
+    transform: scale(1.05); /* Efecto de aumento en hover */
+}
+
+/** Footer **/
+
+.footer-section {
+    background-color: var(--verde-c); /* Verde en el fondo del footer */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-section .menu-footer-section {
+    margin-bottom: 2rem;
+}
+
+.wrap-menu-footer-section ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.wrap-menu-footer-section ul li {
+    font-size: 1.2rem;
+    color: #fff; /* Texto en blanco en el footer */
+    transition: color 0.3s ease;
+}
+
+.wrap-menu-footer-section ul li:hover {
+    color: var(--rosita-c); /* Rosa claro en hover para los enlaces */
+}
+
+.footer-creds {
+    display: flex;
+    justify-content: center;
+    color: #fff; /* Texto en blanco en las credenciales */
+}
