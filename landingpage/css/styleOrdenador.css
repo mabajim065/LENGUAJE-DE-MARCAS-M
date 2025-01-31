@@ -1,0 +1,582 @@
+/* Variables */
+:root{
+    --rosa: #f8bbd0;
+    --rosa2: #f0bdc4;
+    --verde: #0d7901;
+    --verdeClaro: #c9ffc43e;
+    --verdeOscuro: #015000;
+    --negro: #012140;
+    --verdefooter: #4a7f60;
+    --rositabebe:#fab6d7;
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #1d3c21;
+    background-color: var(--verdeClaro);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #880e4f; /* Rosa oscuro */
+}
+
+a {
+    text-decoration: none;
+    color: #ec407a; /* Rosa medio */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d81b60; /* Rosa vibrante */
+}
+
+img.logoPrincipal{
+    width: 15%;
+    height: 10%;
+}
+
+img.logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+div > .imagenPrincipal {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Layout */
+header {
+    background-color: var(--verde); /* Verde */
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    animation: fadeIn 1s ease-out;
+}
+
+main {
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Secciones */
+.inicio {
+    height: 75vh;
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* FONDO IMAGEN */
+    background-image: url("../image/imagenPrincipal.png");
+    background-position: center;
+    background-size:cover;
+    /* FIN FONDO IMAGEN */
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    justify-content: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.textoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+    background-color: #ffc4f5ad;
+    color: var(--verdeOscuro);
+    border: 3px solid #f1f1f15d;
+    width: 80%;
+    padding: 20px;
+    font-size: 1.2em;
+    font-style: italic;
+    border-radius: 12px;
+}
+
+.textoPrincipal > p { /* TEXTO INICIO */
+    margin: 0% 10% 0 10%;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px white;
+}
+
+.textoPrincipal > p + p { /* TEXTO DE FIRMADO POR... */
+    color: var(--verde);
+    margin: 2% 10% 0 10%;
+    text-decoration:underline var(--verde) wavy 2px;
+}
+/*=======CIRCULOS==========*/
+.ramas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.informacion.circulo {
+    background-color: #ffffff;
+    border: 2px solid var(--verde);
+    border-radius: 50%;
+    padding: 1.5rem;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.informacion.circulo:hover {
+    transform: scale(1.1);
+    background-color:#ffc4f5ab; /* Rosa pálido */
+}
+
+
+/*===========EQUIPO=========*/
+.team h1{
+    display: flex;
+    justify-content: center;
+    align-items: column;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+.equipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: -30px;
+}
+
+/* Estilo base de cada integrante */
+.integrante {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    transition: transform 0.3s ease, width 0.5s ease;
+}
+
+.integrante .texto {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    transition: left 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 200px;
+}
+
+.integrante:hover .texto {
+    left: calc(100% + 10px);
+}
+
+/* Imagen de cada integrante */
+.integrante .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: translate 0.5s ease, transform 0.5s ease;
+}
+
+.integrante .info {
+    position: absolute;
+    right: -100%; 
+    width: 50%; 
+    height: 100%;
+    background-color: #34a853; 
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    transition: right 0.3s ease;
+}
+
+.integrante:hover .imagen img#macarena {
+    translate: -160px -25px;
+    transform: scale(0.8);
+}
+
+.integrante:hover .imagen img:not(#macarena) {
+    translate: -160px 50px;
+    transform: scale(0.7);
+}
+
+.integrante:hover .imagen img#olga {
+    transform: scale(0.65);
+    translate: -180px 10px;
+}
+
+.integrante:hover .info {
+    right: 0;
+}
+
+.integrante .info h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.integrante .info h2 {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+/* Contenedor del texto */
+.texto {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 0;
+    background-color: #ffffff;
+    color: #880e4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Títulos dentro del texto */
+.texto h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.texto h2 {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #ec407a;
+}
+
+/* Hover para mostrar el texto */
+.integrante:hover {
+    width: 650px; /* Se expande el contenedor */
+}
+
+.integrante:hover .texto {
+    width: calc(100% - 350px); /* Espacio que ocupa el texto */
+    opacity: 1;
+    left: 400px;
+}
+
+.quehacemos, .aulaburbujas, .experiencias {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.7s ease-out;
+}
+
+.experiencias ul{
+    margin-left: 30px;
+}
+.circulo {
+    background-color: #fce4ec; /* Rosa claro */
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    animation: fadeIn 1.9s ease-out;
+}
+
+.colabList > h1{
+    display:flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.colaboradores {
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+.colaborador {
+    background-color: #ffffff;
+    border: 2px solid #ec407a;
+    border-radius: 50%;
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align:center;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* para que no se salgan del circulito */
+}
+
+.colaborador:hover {
+    transform: scale(1.1);
+}
+
+.colaborador img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 50%;  
+}
+
+
+.ubicacion {
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.preguntasfrecuentes > h1 {
+    color: white;
+    text-decoration:underline var(--rosa) ;
+}
+
+.preguntasfrecuentes .pregunta {
+    background-color: #f9f9f9;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    h1{
+        cursor: help;
+        font-size: 1.4em;
+    }
+}
+
+.pregunta p {
+    color: var(--verdeOscuro);
+}
+
+.preguntasfrecuentes .pregunta:hover {
+    transform: scale(1.05);
+    background-color:#ffd3ed; /* Rosa pálido */
+}
+
+/* CONTENIDO PREGUNTAS FRECUENTES */
+summary{
+    display: flex;
+    justify-content: center;
+}
+
+summary:before {
+    color: var(--verdeOscuro);
+    margin-right: 1%;
+    margin-bottom: -15px;
+    font-size: 1.3em;
+    content: "⮶";
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+details[open] summary:before {
+    font-size: 1.3em;
+    content: "⮳";
+}
+
+/* Footer */
+footer {
+    background-color: var(--verdefooter); /* Verde */
+    color:white;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+    animation: fadeIn 2.5s ease-out ;
+}
+
+footer .contacto a {
+    text-align:center;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+footer .informacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .infoUbicacion{
+    text-justify: center;
+}
+
+footer .logoEquipo{
+    height: 20vh ;
+}
+
+footer .contacto .logoInstagram {
+    width: 55px;
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+footer .contacto .logoInstagram:hover {
+    transform: scale(1.1);
+}
+
+footer .contacto .logoYoutube {
+    width: 55px;
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+footer .contacto .logoYoutube:hover {
+    transform: scale(1.1);
+}
+
+footer .contacto .logoFacebook {
+    width: 50px;
+    height: 40px;
+    margin-bottom: 3px;
+    transition: transform 0.3s ease;
+}
+
+footer .contacto .logoFacebook:hover {
+    transform: scale(1.1);
+}
+
+.horarios {
+    background: linear-gradient(135deg, #f8bbd0, #fab6d7);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+    max-width: 350px;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.horarios:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 20px rgba(0,0,0,0.3);
+}
+
+.horarios h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a7f60;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.horarios p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 5px 0;
+    color: #4a7f60;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .ramas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #informacion.circulo {
+        width: 120px;
+        height: 120px;
+        font-size: 0.9rem;
+    }
+
+    footer .contacto {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+    }
+    
+    footer .contacto a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    footer .contacto .logo {
+        width: 24px; 
+        height: auto;
+    }
+
+
+    .integrante {
+        width: 100%;
+        height: 200px;
+        border-radius: 12px;
+    }
+
+    .integrante img {
+        border-radius: 12px 0 0 12px;
+    }
+
+    .integrante:hover {
+        width: 100%;
+    }
+
+    .integrante:hover .texto {
+        left: 200px;
+    }
+}

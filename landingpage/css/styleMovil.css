@@ -1,0 +1,262 @@
+/* Variables */
+:root {
+    --rosa: #f8bbd0;
+    --rosa2: #f0bdc4;
+    --verde: #0d7901;
+    --verdeClaro: #c9ffc43e;
+    --verdeOscuro: #015000;
+    --negro: #012140;
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.4;
+    color: #1d3c21;
+    background-color: var(--verdeClaro);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #880e4f; /* Rosa oscuro */
+    font-size: 1.2em; /* Ajuste de tamaño */
+}
+
+a {
+    text-decoration: none;
+    color: #ec407a; /* Rosa medio */
+    transition: color 0.3s ease;
+    font-size: 0.9em; /* Reducir tamaño */
+}
+
+a:hover {
+    color: #d81b60; /* Rosa vibrante */
+}
+
+img.logoPrincipal {
+    width: 50%;
+    height: auto;
+}
+
+img.logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+div > .imagenPrincipal {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Layout */
+header {
+    background-color: var(--verde); /* Verde */
+    color: white;
+    text-align: center;
+    padding: 1rem 0.5rem;
+}
+
+main {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Secciones */
+.inicio {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-color: #fce4ec; /* Rosa claro */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.ramas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.informacion.circulo {
+    background-color: #ffffff;
+    border: 2px solid #ec407a;
+    border-radius: 50%;
+    padding: 1rem;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.equipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Estilo base de cada integrante */
+.integrante {
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    width: 250px; /* Tamaño inicial */
+    height: 250px;
+    border-radius: 50%;
+    transition: width 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de cada integrante */
+.integrante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Contenedor del texto */
+.texto {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 0;
+    background-color: #ffffff;
+    color: #880e4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Títulos dentro del texto */
+.texto h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.texto h2 {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #ec407a;
+}
+
+/* Hover para mostrar el texto */
+.integrante:hover {
+    width: 650px; /* Se expande el contenedor */
+}
+
+.integrante:hover .texto {
+    width: calc(100% - 350px); /* Espacio que ocupa el texto */
+    opacity: 1;
+    left: 400px;
+}
+
+.quehacemos, .aulaburbujas, .experiencias {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.circulo {
+    background-color: #fce4ec; /* Rosa claro */
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.ubicacion {
+    text-align: center;
+    padding: 1rem;
+}
+
+.preguntasfrecuentes .pregunta {
+    background-color: #f9f9f9;
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: var(--verdeOscuro); /* Verde */
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .contacto a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+footer .logoEquipo{
+    height: 20vh ;
+}
+
+/* Responsividad adicional */
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1em;
+    }
+
+    a {
+        font-size: 0.8em;
+    }
+
+    .informacion.circulo {
+        width: 80px;
+        height: 80px;
+        font-size: 0.7rem;
+    }
+
+    footer .contacto a {
+        flex-direction: column;
+    }
+
+    .integrante {
+        width: 100%;
+        height: 200px;
+        border-radius: 12px;
+    }
+
+    .integrante img {
+        border-radius: 12px 0 0 12px;
+    }
+
+    .integrante:hover {
+        width: 100%;
+    }
+
+    .integrante:hover .texto {
+        left: 200px;
+    }
+}
