@@ -87,5 +87,42 @@
       <p>MARIA</p>
     </div>
 
+    <!-- Contenedor para el formulario, hace que todo se vea centrado y ordenado -->
+  <div class="container mt-5">
+    <!-- Título del formulario -->
+    <h2>Formulario de Inicio de Sesión</h2>
+
+    <!-- Comienza el formulario, con la acción que define dónde se enviará -->
+    <form action="/action_page.php">
+
+      <!-- Campo para introducir el correo electrónico -->
+      <div class="mb-3">
+        <!-- Etiqueta del campo, que se muestra al lado del input -->
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Introduce tu correo" name="email" required>
+      </div>
+
+      <!-- Campo para introducir la contraseña -->
+      <div class="mb-3">
+        <!-- Etiqueta para la contraseña -->
+        <label for="pwd" class="form-label">Contraseña:</label>
+        <!-- Campo de entrada para la contraseña, también con 'required' para hacerlo obligatorio -->
+        <input type="password" class="form-control" id="pwd" placeholder="Introduce tu contraseña" name="pswd" required>
+      </div>
+
+      <!-- Checkbox para la opción de "Recuérdame" -->
+      <div class="form-check mb-3">
+        <!-- El checkbox con su id para poder seleccionarlo y su etiqueta correspondiente -->
+        <input class="form-check-input" type="checkbox" name="remember" id="remember">
+        <label class="form-check-label" for="remember">
+          Recuérdame
+        </label>
+      </div>
+
+      <!-- Botón para enviar el formulario -->
+      <button type="submit" class="btn btn-primary">Enviar</button>
+
+    </form>
+  </div>
 </body>
 </html>
