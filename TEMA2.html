@@ -4,32 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Web María Abascal Jiménez</title>
-    <style>
+   <style>
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         body {
-            background-color: #fef0f9; /* Rosa suave de fondo */
-            font-family: 'Georgia', serif;
-            color: #5d2f6f; /* Rosa oscuro para el texto */
+            font-family: Georgia, serif;
+            background: linear-gradient(270deg, #fef0f9, #fce1f0, #f9b5d1);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
             margin: 0;
             padding: 0;
+            color: #5d2f6f;
         }
 
         header {
-            background-color: #f6c7d3; /* Rosa pastel suave */
+            background-color: #f6c7d3;
             color: white;
-            text-align: center;
-            padding: 30px 0;
             font-size: 30px;
-            font-weight: bold;
-            border-bottom: 3px solid #f0b8d8; /* Rosa más intenso */
+            text-align: center;
+            padding: 30px;
+            border-bottom: 3px solid #f0b8d8;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header:hover {
+            transform: scale(1.05);
         }
 
         h1 {
+            color: #f0b8d8;
             font-size: 40px;
         }
 
         nav {
-            background-color: #fce1f0; /* Rosa pastel muy suave */
-            color: #5d2f6f; /* Rosa oscuro */
+            background-color: #fce1f0;
+            color: #5d2f6f;
             font-family: Georgia;
             font-size: 20px;
             text-align: center;
@@ -42,38 +55,57 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         li {
             display: inline;
-            margin: 0 15px;
         }
 
         li a {
-            color: #fff;
-            background-color: #f9b5d1; /* Rosa suave pastel */
+            color: white;
+            background-color: #f9b5d1;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
             padding: 12px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         li a:hover {
-            background-color: #f6a0c3; /* Rosa más intenso en hover */
+            background-color: #f6a0c3;
             color: white;
             transform: scale(1.1);
         }
 
         img {
             display: block;
-            margin: 20px auto;
+            margin: 40px auto;
             max-width: 80%;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(214, 143, 159, 0.5);
+            box-shadow: 0 6px 15px rgba(214, 143, 159, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: rotate(3deg) scale(1.05);
+        }
+
+        footer {
+            background-color: #f6c7d3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
