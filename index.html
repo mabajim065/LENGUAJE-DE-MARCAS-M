@@ -1,118 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Web María Abascal Jiménez</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
+            font-family: Georgia, serif;
+            background-color: #494949;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7; /* Fondo gris claro */
-            color: #333; /* Color de texto gris oscuro para un buen contraste */
+            color: rgb(255, 115, 192);
         }
-
-        /* Encabezado */
         header {
-            background-color: rgba(245, 245, 245, 0.9); /* Gris muy suave */
-            color: #d68f9f; /* Rosa suave para el texto */
-            padding: 20px 0;
+            background-color: rgb(73, 73, 73);
+            color: rgb(255, 115, 192);
+            font-size: 30px;
             text-align: center;
-            font-family: 'Arial', sans-serif;
-            font-size: 28px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            border-bottom: 2px solid #d68f9f; /* Rosa suave para el borde */
+            padding: 20px;
+            border-bottom: 3px solid rgb(144, 68, 142);
         }
-
         nav {
-            background-color: #e8d8e3; /* Rosa pastel suave */
-            color: #ffffff;
-            text-align: center;
-            padding: 12px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        nav li {
-            display: inline-block;
-            margin: 0 20px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        nav li a {
-            text-decoration: none;
-            color: #d68f9f; /* Rosa suave */
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 5px 12px;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        nav li:hover {
-            transform: scale(1.1);
-            background-color: #928487; /* Rosa suave cuando se pasa el cursor */
-            border: 2px solid #d68f9f; /* Rosa suave para el borde */
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco-rosado */
-            margin-top: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font-size: 24px;
-            color: #d68f9f; /* Rosa suave */
-            margin-top: 0;
-            font-family: 'Georgia', serif;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 4px rgba(214, 143, 159, 0.3); /* Sutil sombra rosada */
-        }
-
-        footer {
-            background-color: #e8d8e3; /* Rosa pastel suave */
-            color: #333;
+            background-color: rgb(73, 73, 73);
             text-align: center;
             padding: 15px 0;
+            border-top: 3px solid rgb(144, 68, 142);
+            border-bottom: 3px solid rgb(144, 68, 142);
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            margin: 0 15px;
+        }
+        li a {
+            color: rgb(255, 115, 192);
+            text-decoration: none;
+            font-size: 20px;
+            padding: 14px 16px;
+            transition: color 0.3s ease;
+        }
+        li a:hover {
+            color: rgb(120, 248, 216);
+        }
+        h1 {
+            font-size: 40px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 115, 192, 0.5);
+        }
+        footer {
+            background-color: rgb(73, 73, 73);
+            color: rgb(255, 115, 192);
+            text-align: center;
+            padding: 15px;
             position: fixed;
-            width: 100%;
             bottom: 0;
+            width: 100%;
             font-size: 14px;
         }
-
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Página Web María Abascal Jiménez</h1>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="TEMA1.html"><h2>TEMA 1</h2></a></li>
-        <li><a href="TEMA2.html"><h2>TEMA 2</h2></a></li>
-        <li><a href="TEMA3.html"><h2>TEMA 3</h2></a></li>
-    </ul>
-</nav>
-
-<section>
-    <h2>Bienvenida a mi página web</h2>
-    <p>Hola!! Soy María y esta es mi página web donde iré subiendo mis trabajos mas guays trabajados en clase.</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 María Abascal Jiménez | 1ºDAW</p>
-</footer>
-
+    <header>
+        <h1>PÁGINA WEB MARÍA ABASCAL JIMÉNEZ</h1>
+    </header>
+    <nav>
+        <ul>
+           <li><a href="TEMA1.html">TEMA 1</a></li>
+           <li><a href="TEMA2/TEMA2.html">TEMA 2</a></li>
+        </ul>
+    </nav>
+    <img src="ruta-de-la-imagen" alt="Imagen de referencia">
+    <footer>
+        &copy; 2025 María Abascal Jiménez. Todos los derechos reservados.
+    </footer>
 </body>
 </html>
