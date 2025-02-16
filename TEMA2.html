@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Web María Abascal Jiménez</title>
     <style>
+        body {
+            background-color: #fef0f9; /* Rosa suave de fondo */
+            font-family: 'Georgia', serif;
+            color: #5d2f6f; /* Rosa oscuro para el texto */
+            margin: 0;
+            padding: 0;
+        }
+
         header {
-            border: rgb(144, 68, 142);
-            background-color: rgb(73, 73, 73);
-            color: rgb(255, 115, 192);
-            font-family: Georgia;
-            font-size: 30px;
+            background-color: #f6c7d3; /* Rosa pastel suave */
+            color: white;
             text-align: center;
-        }
-        nav {
-            background-color: rgb(73, 73, 73);
-            color: rgb(255, 115, 192);
-            font-family: Georgia;
+            padding: 30px 0;
             font-size: 30px;
-            text-align: center;
+            font-weight: bold;
+            border-bottom: 3px solid #f0b8d8; /* Rosa más intenso */
         }
+
         h1 {
-            color: rgb(255, 115, 192);
-            font-family: Georgia;
             font-size: 40px;
-            text-align: center;
         }
-        h2 {
-            color: rgb(255, 115, 192);
+
+        nav {
+            background-color: #fce1f0; /* Rosa pastel muy suave */
+            color: #5d2f6f; /* Rosa oscuro */
             font-family: Georgia;
             font-size: 20px;
             text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -39,24 +45,35 @@
             overflow: hidden;
             text-align: center;
         }
+
         li {
             display: inline;
             margin: 0 15px;
         }
+
         li a {
-            color: rgb(255, 115, 192);
+            color: #fff;
+            background-color: #f9b5d1; /* Rosa suave pastel */
             text-decoration: none;
-            font-size: 20px;
-            padding: 14px 16px;
-        }
-        li a:hover {
-            background-color: rgb(120, 248, 216);
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
             border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
+        li a:hover {
+            background-color: #f6a0c3; /* Rosa más intenso en hover */
+            color: white;
+            transform: scale(1.1);
+        }
+
         img {
             display: block;
             margin: 20px auto;
-            max-width: 100%;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(214, 143, 159, 0.5);
         }
     </style>
 </head>
@@ -64,6 +81,7 @@
     <header>
         <h1>PÁGINA WEB MARÍA ABASCAL JIMÉNEZ</h1>
     </header>
+
     <nav>
         <ul>
            <li><a href="TEMA2/EJERCICIO IMAGEN/eje2imagenes.html">EJERCICIO 1</a></li>
@@ -73,6 +91,7 @@
            <li><a href="TEMA2/FRAME/frame1.html">EJERCICIO 5</a></li>
         </ul>
     </nav>
+
     <img src="ruta-de-la-imagen" alt="Imagen de referencia">
 </body>
 </html>
