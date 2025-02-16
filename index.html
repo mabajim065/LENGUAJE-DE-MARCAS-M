@@ -6,81 +6,122 @@
     <title>Página Web María Abascal Jiménez</title>
     <style>
         body {
-            font-family: Georgia, serif;
-            background-color: #494949;
+            font-family: 'Arial', sans-serif;
+            background-color: #fef0f9; /* Rosa muy suave y cálido */
             margin: 0;
             padding: 0;
-            color: rgb(255, 115, 192);
+            color: #5d2f6f; /* Rosa oscuro pero suave */
         }
+
         header {
-            background-color: rgb(73, 73, 73);
-            color: rgb(255, 115, 192);
-            font-size: 30px;
+            background-color: #f6c7d3; /* Rosa suave pastel */
+            color: #fff;
+            padding: 50px 0;
             text-align: center;
-            padding: 20px;
-            border-bottom: 3px solid rgb(144, 68, 142);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #d097b2; /* Rosa cálido suave */
+            text-align: center;
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+
         nav {
-            background-color: rgb(73, 73, 73);
+            background-color: #fce1f0; /* Rosa pastel muy suave */
             text-align: center;
-            padding: 15px 0;
-            border-top: 3px solid rgb(144, 68, 142);
-            border-bottom: 3px solid rgb(144, 68, 142);
+            padding: 40px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        ul {
-            list-style-type: none;
+
+        nav ul {
+            list-style: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
         }
-        li {
-            display: inline;
-            margin: 0 15px;
+
+        nav li {
+            display: inline-block;
         }
-        li a {
-            color: rgb(255, 115, 192);
+
+        nav a {
             text-decoration: none;
-            font-size: 20px;
-            padding: 14px 16px;
-            transition: color 0.3s ease;
+            color: #9b4d75; /* Rosa más oscuro */
+            font-size: 22px;
+            font-weight: 600;
+            padding: 15px 30px;
+            background-color: #f9b5d1; /* Rosa suave pastel */
+            border-radius: 30px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
         }
-        li a:hover {
-            color: rgb(120, 248, 216);
+
+        nav a:hover {
+            background-color: #f6a0c3; /* Rosa pastel más intenso en hover */
+            color: #fff;
         }
-        h1 {
-            font-size: 40px;
+
+        h2 {
+            color: #9b4d75;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 20px;
         }
+
         img {
             display: block;
-            margin: 20px auto;
             max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(255, 115, 192, 0.5);
+            height: auto;
+            margin: 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
+
         footer {
-            background-color: rgb(73, 73, 73);
-            color: rgb(255, 115, 192);
+            background-color: #f6c7d3;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            padding: 15px;
-            position: fixed;
+            position: absolute;
             bottom: 0;
             width: 100%;
-            font-size: 14px;
         }
+
     </style>
 </head>
 <body>
     <header>
         <h1>PÁGINA WEB MARÍA ABASCAL JIMÉNEZ</h1>
     </header>
+
+    <div class="intro">
+        <p>¡Hola! Soy María Abascal y estás viendo mi página web, donde iré actualizando todos mis proyectos del grado superior DAW.</p>
+    </div>
+
     <nav>
         <ul>
-           <li><a href="TEMA1.html">TEMA 1</a></li>
-           <li><a href="TEMA2/TEMA2.html">TEMA 2</a></li>
+            <li><a href="TEMA1.html"><h2> Tema 1</h2></a></li>
+            <li><a href="TEMA2/TEMA2.html"><h2> Tema 2</h2></a></li>
+            <li><a href="TEMA3.html"><h2> Tema 3</h2></a></li>
         </ul>
     </nav>
+
     <img src="ruta-de-la-imagen" alt="Imagen de referencia">
+
     <footer>
-        &copy; 2025 María Abascal Jiménez. Todos los derechos reservados.
+        <p>&copy; 2025 María Abascal.</p>
     </footer>
 </body>
 </html>
