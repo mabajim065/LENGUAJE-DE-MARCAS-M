@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Web María Abascal Jiménez</title>
     <style>
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #fef0f9; /* Rosa muy suave y cálido */
+            background: linear-gradient(270deg, #fef0f9, #fce1f0, #f9b5d1);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
             margin: 0;
             padding: 0;
-            color: #5d2f6f; /* Rosa oscuro pero suave */
+            color: #5d2f6f;
         }
 
         header {
-            background-color: #f6c7d3; /* Rosa suave pastel */
+            background-color: #f6c7d3;
             color: #fff;
             padding: 50px 0;
             text-align: center;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header:hover {
+            transform: scale(1.05);
         }
 
         h1 {
@@ -29,14 +42,16 @@
 
         .intro {
             font-size: 18px;
-            color: #d097b2; /* Rosa cálido suave */
+            color: #d097b2;
             text-align: center;
             margin-top: 30px;
             line-height: 1.6;
+            opacity: 1;
+            transform: none;
         }
 
         nav {
-            background-color: #fce1f0; /* Rosa pastel muy suave */
+            background-color: #fce1f0;
             text-align: center;
             padding: 40px 0;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -51,42 +66,37 @@
             gap: 30px;
         }
 
-        nav li {
-            display: inline-block;
-        }
-
         nav a {
             text-decoration: none;
-            color: #9b4d75; /* Rosa más oscuro */
+            color: #9b4d75;
             font-size: 22px;
             font-weight: 600;
             padding: 15px 30px;
-            background-color: #f9b5d1; /* Rosa suave pastel */
+            background-color: #f9b5d1;
             border-radius: 30px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.3s ease;
             display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav a:hover {
-            background-color: #f6a0c3; /* Rosa pastel más intenso en hover */
+            background-color: #f6a0c3;
             color: #fff;
-        }
-
-        h2 {
-            color: #9b4d75;
-            font-size: 18px;
-            font-weight: normal;
-            text-align: center;
-            margin-top: 20px;
+            transform: scale(1.1);
         }
 
         img {
             display: block;
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
             margin: 40px auto;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: rotate(5deg) scale(1.05);
         }
 
         footer {
@@ -94,11 +104,10 @@
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            position: absolute;
-            bottom: 0;
             width: 100%;
+            position: fixed;
+            bottom: 0;
         }
-
     </style>
 </head>
 <body>
@@ -112,13 +121,11 @@
 
     <nav>
         <ul>
-            <li><a href="TEMA1.html"><h2> Tema 1</h2></a></li>
-            <li><a href="TEMA2.html"><h2> Tema 2</h2></a></li>
-            <li><a href="TEMA3.html"><h2> Tema 3</h2></a></li>
+            <li><a href="TEMA1.html">Tema 1</a></li>
+            <li><a href="TEMA2.html">Tema 2</a></li>
+            <li><a href="TEMA3.html">Tema 3</a></li>
         </ul>
     </nav>
-
-    <img src="ruta-de-la-imagen" alt="Imagen de referencia">
 
     <footer>
         <p>&copy; 2025 María Abascal.</p>
