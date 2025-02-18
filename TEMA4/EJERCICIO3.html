@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3</title>
+</head>
+<body>
+  <script>
+    "use strict";
+    
+    // Array pa almacenar los números
+    let numeros = [];
+    let pares = 0;
+    let impares = 0;
+
+
+    while (true) {
+        let input = prompt("Introduce un número (o 0 para terminar):");
+
+        // Verificar si el input es un número
+        let numero = parseInt(input);
+
+        // Terminar si el usuario ingresa 0 o un valor no numérico
+        if (isNaN(numero) || numero === 0) {
+            break;
+        }
+
+        // Agregar el número al array
+        numeros.push(numero);
+
+        // Contar los números pares e impares
+        if (numero % 2 === 0) {
+            pares++;
+        } else {
+            impares++;
+        }
+    }
+
+    // Mostrar el resultado
+    document.write("El array de números es: [" + numeros.join(", ") + "]<br>");
+    document.write("Números pares: " + pares + "<br>");
+    document.write("Números impares: " + impares + "<br>");
+  </script>
+</body>
+</html>

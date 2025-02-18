@@ -7,9 +7,14 @@
 <body>
   <script>
     "use strict"; 
+    let array_valores = [];  // Crear un array vacío
+// Crear un array vacío
+let longitud = 100;
+    for (let i = 0; i < longitud; i++) { 
+        array[i] = i;  
+    } 
     
-    // Crear un array de 100 valores aleatorios entre 1 y 100
-    let vector_valores = new Array(100).fill(0).map(() => Math.floor(Math.random() * 100) + 1); 
+
     // Función para calcular la suma del array
     function calcularSuma(vector_valores) {
         let suma = 0;
