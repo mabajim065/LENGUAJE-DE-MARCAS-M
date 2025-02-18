@@ -3,104 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <title>TEMA 3</title>
+   <style>
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         body {
-            background-color: #f7f7f7; /* Fondo gris claro */
-            font-family: 'Georgia', serif;
-            color: #333; /* Texto en gris oscuro */
+            font-family: Georgia, serif;
+            background: linear-gradient(270deg, #fef0f9, #fce1f0, #f9b5d1);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
             margin: 0;
             padding: 0;
-            height: 100%;
+            color: #5d2f6f;
+        }
+
+        header {
+            background-color: #f6c7d3;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 30px;
+            border-bottom: 3px solid #f0b8d8;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: #f0b8d8;
+            font-size: 40px;
         }
 
         nav {
-            background-color: rgba(245, 245, 245, 0.9); /* Gris muy suave */
-            color: #d68f9f; /* Rosa suave */
+            background-color: #fce1f0;
+            color: #5d2f6f;
+            font-family: Georgia;
             font-size: 20px;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px 0;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background-color: rgba(245, 182, 193, 0.9); /* Rosa pastel suave */
-            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         li {
-            display: inline-block;
-            margin-right: 15px;
+            display: inline;
         }
 
         li a {
-            display: block;
-            color: #d68f9f; /* Rosa suave */
-            text-align: center;
-            padding: 14px 20px;
+            color: white;
+            background-color: #f9b5d1;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 30px;
             transition: all 0.3s ease;
-            border-radius: 5px;
-        }
-
-        li a:hover {
-            background-color: rgba(255, 228, 225, 0.9); /* Rosa claro */
-            color: #d68f9f; /* Rosa suave */
-            transform: scale(1.1); /* Efecto de aumento */
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco-rosado */
-            margin-top: 40px;
-            border-radius: 15px;
+            display: inline-block;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
+        li a:hover {
+            background-color: #f6a0c3;
+            color: white;
+            transform: scale(1.1);
+        }
+
         img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(255, 115, 173, 0.3); /* Sombra suave rosa */
-            margin-top: 20px;
+            display: block;
+            margin: 40px auto;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(214, 143, 159, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: rotate(3deg) scale(1.05);
         }
 
         footer {
-            background-color: rgba(245, 182, 193, 0.9); /* Rosa pastel suave */
-            color: #333;
+            background-color: #f6c7d3;
+            color: white;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px;
+            font-size: 16px;
             position: fixed;
-            width: 100%;
             bottom: 0;
-            font-size: 14px;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
         }
-
     </style>
 </head>
 <body>
-
+    <header>
+        PÁGINA ELEGANTE
+    </header>
     <nav>
         <ul>
-           <li><a href="HTML/EJEMPLO5">EJERCICIO1</a></li>
+           <li><a href="HTML/EJEMPLO5">EJERCICIO 1</a></li>
            <li><a href="HTML/EJERCICIOCALCULADORA.html">CALCULADORA</a></li>
-            <li><a href="TEMA3/PRUBARAPIDA.html">PRUEBA RAPIDA</a></li>
-             <li><a href="TEMA3/prubeacomentarios.html">CÓDIGO COMENTADO</a></li>
-            <li><a href="TEMA3/FORMULARIO.html">FORMULARIO</a></li>
-            <br>
-            <br>
-            <li><a href="index.html">PÁGINA PRINCIPAL</a></li>
+           <li><a href="TEMA3/PRUBARAPIDA.html">PRUEBA RÁPIDA</a></li>
+           <li><a href="TEMA3/prubeacomentarios.html">CÓDIGO COMENTADO</a></li>
+           <li><a href="TEMA3/FORMULARIO.html">FORMULARIO</a></li>
+           <li><a href="index.html">PÁGINA PRINCIPAL</a></li>
         </ul>
     </nav>
-
+    <img src="ruta-de-la-imagen" alt="Imagen de referencia">
+    <footer>
+        &copy;  María Abascal Jiménez 2025
+    </footer>
 </body>
 </html>
-
