@@ -1,4 +1,4 @@
-<!DOCTYPE JavaScript>
+<!DOCTYPE HTML>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -6,21 +6,25 @@
 </head>
 <body>
   <script>
-"use strict"; 
-
-let vector_valores = new Array(100).fill(0).map(() => Math.floor(Math.random() * 100) + 1); 
-functioncalcularsuma(vector_valores);
-    let suma=0;
-    for (let i=0; i<vector_valores.length; i++){
-        suma=suma+vector_valores[i];
+    "use strict"; 
+    
+    // Crear un array de 100 valores aleatorios entre 1 y 100
+    let vector_valores = new Array(100).fill(0).map(() => Math.floor(Math.random() * 100) + 1); 
+    // Función para calcular la suma del array
+    function calcularSuma(vector_valores) {
+        let suma = 0;
+        for (let i = 0; i < vector_valores.length; i++) {
+            suma += vector_valores[i];  // Sumar cada valor del array
+        }
+        return suma;  // Devolver el resultado de la suma
     }
-    return suma;
-    document.write(vector_valores);
-    document.write("<br/>");
-    document.write(suma);
 
+    // Llamar a la función para obtener la suma
+    let suma = calcularSuma(vector_valores);
 
-</script>
-
+    // Mostrar el array y la suma en el documento
+   
+    document.write("La suma es: " + suma);  // Mostrar la suma total
+  </script>
 </body>
 </html>
