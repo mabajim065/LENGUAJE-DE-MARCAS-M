@@ -1,0 +1,26 @@
+<!DOCTYPE JavaScript>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+"use strict"; 
+
+let vector_valores = new Array(100).fill(0).map(() => Math.floor(Math.random() * 100) + 1); 
+functioncalcularsuma(vector_valores);
+    let suma=0;
+    for (let i=0; i<vector_valores.length; i++){
+        suma=suma+vector_valores[i];
+    }
+    return suma;
+    document.write(vector_valores);
+    document.write("<br/>");
+    document.write(suma);
+
+
+</script>
+
+</body>
+</html>
