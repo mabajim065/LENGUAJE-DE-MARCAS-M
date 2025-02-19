@@ -8,19 +8,18 @@
   <script>
     "use strict";
     
-    // Array pa almacenar los números
+    // Array para guardar los números
     let numeros = [];
     let pares = 0;
     let impares = 0;
 
-
     while (true) {
-        let input = prompt("pon un número (pon un 0 para terminar):");
+        let input = prompt("Pon un número (pon un 0 para terminar):");
 
-        // Verificar si el input es un número
+        // Convertir el input a un número
         let numero = parseInt(input);
 
-        // Terminar si el usuario ingresa 0 o un valor no numérico
+        // Terminar si el número es 0 o no es un número
         if (isNaN(numero) || numero === 0) {
             break;
         }
@@ -36,9 +35,9 @@
         }
     }
 
-    
-    document.write("Numeros pares: " + pares + "<br>");
-    document.write("Numeros impares: " + impares + "<br>");
+    // Mostrar los resultados en la pantalla
+    document.write("Números pares: " + pares + "<br>");
+    document.write("Números impares: " + impares + "<br>");
   </script>
 </body>
 </html>
