@@ -10,51 +10,53 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-    
+        
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0; /* Fondo liso en un tono gris suave */
+            background: linear-gradient(270deg, #fef0f9, #fce1f0, #f9b5d1);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
             margin: 0;
             padding: 0;
             color: #5d2f6f;
         }
-    
+
         header {
-            background-color: #e0b8d3; /* Gris suave */
+            background-color: #f6c7d3;
             color: #fff;
             padding: 50px 0;
             text-align: center;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
-    
+
         header:hover {
             transform: scale(1.05);
         }
-    
+
         h1 {
             font-size: 48px;
             font-weight: bold;
             letter-spacing: 3px;
         }
-    
+
         .intro {
             font-size: 18px;
-            color: #b083a2; /* Gris más oscuro */
+            color: #d097b2;
             text-align: center;
             margin-top: 30px;
             line-height: 1.6;
             opacity: 1;
             transform: none;
         }
-    
+
         nav {
-            background-color: #e5e5e5; /* Gris claro */
+            background-color: #fce1f0;
             text-align: center;
             padding: 40px 0;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-    
+
         nav ul {
             list-style: none;
             margin: 0;
@@ -63,26 +65,26 @@
             justify-content: center;
             gap: 30px;
         }
-    
+
         nav a {
             text-decoration: none;
-            color: #9b4d75; /* Rosa elegante */
+            color: #9b4d75;
             font-size: 22px;
             font-weight: 600;
             padding: 15px 30px;
-            background-color: #d8a8c8; /* Gris suave con toque rosa */
+            background-color: #f9b5d1;
             border-radius: 30px;
             transition: all 0.3s ease;
             display: inline-block;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-    
+
         nav a:hover {
-            background-color: #f1a6c4; /* Rosa más suave para hover */
+            background-color: #f6a0c3;
             color: #fff;
             transform: scale(1.1);
         }
-    
+
         img {
             display: block;
             max-width: 80%;
@@ -92,13 +94,13 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
-    
+
         img:hover {
             transform: rotate(5deg) scale(1.05);
         }
-    
+
         footer {
-            background-color: #e0b8d3; /* Gris suave */
+            background-color: #f6c7d3;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -107,7 +109,6 @@
             bottom: 0;
         }
     </style>
-    
 </head>
 <body>
     <header>
@@ -123,7 +124,7 @@
             <li><a href="TEMA1.html">Tema 1</a></li>
             <li><a href="TEMA2.html">Tema 2</a></li>
             <li><a href="TEMA3.html">Tema 3</a></li>
-            <li><a href="TEMA4.html"> Tema 4></a></li>
+            <li><a href="TEMA4.html">Tema 4</a></li>
         </ul>
     </nav>
 
