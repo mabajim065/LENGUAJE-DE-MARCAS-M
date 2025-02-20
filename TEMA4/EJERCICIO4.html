@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+    /* hay que hacer una funcion recursiva que el usuario le diga dos numeros
+     y eleve el primer numero al segundo*/
+     let input = prompt("Pon el numero que quieres elevar:");
+     let numero1 = parseInt(input);
+     let input2 = prompt("Pon el numero que quieres elevar al segundo:");
+     let numero2 = parseInt(input2);
+    function elevar(numero1, numero2) {
+        if (numero2 === 0) {
+            return numero1;
+        } else {
+            return elevar(numero1 * numero2, numero2 - 1);
+        }
+    }
+   /* ahora imprimo por pantalla el resultado de la funcion */
+   document.write( "El resultado es: " + elevar(numero1, numero2));
+
+  </script>
+</body>
+</html> 
