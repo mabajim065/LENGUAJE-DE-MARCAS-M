@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+    /*hay que hacer una programacion orientada a objetos en la que el usuario ponga 
+    los numeros que quiera y se imprima por pantalla el numero mas grande , el numero 
+    mas pequeño, la suma de todos los numeros y la multiplicacion de todos estos numeros*/
+    let numeros = [];
+    let input = prompt("Pon los numeros que quieres calcular(escribelos seguidos uno de otro (X , Y , Z , B , ...)):");
+    numeros = input.split(",");
+    numeros = numeros.map(Number);
+    function suma(numeros) {
+        let resultado = 0;
+        for (let i = 0; i < numeros.length; i++) {
+            resultado += numeros[i];
+        }
+        return resultado;
+    }
+    function mayor(numeros) {
+        let resultado = numeros[0];
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] > resultado) {
+                resultado = numeros[i];
+            }
+        }
+        return resultado;
+    }
+    function menor(numeros) {
+        let resultado = numeros[0];
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] < resultado) {
+                resultado = numeros[i];
+            }
+        }
+        return resultado;
+    }
+    function multiplicacion(numeros) {
+        let resultado = 1;
+        for (let i = 0; i < numeros.length; i++) {
+            resultado *= numeros[i];
+        }
+        return resultado;
+    }
+    /* ahora imprimo por pantalla el resultado de la funcion */
+    document.write("SOLUCIONES DEL EJERCICIO  5 :<br><br>");
+    document.write("La suma es: " + suma(numeros) + "<br>");
+    document.write("El numero mayor es: " + mayor(numeros) + "<br>");
+    document.write("El numero menor es: " + menor(numeros) + "<br>");
+    document.write("La multiplicacion es: " + multiplicacion(numeros));
+   
+  </script>
+</body>
+</html> 
