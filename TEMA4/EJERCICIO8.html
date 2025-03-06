@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+/*Crear una página en la que hay un div con texto y al pasar el ratón por encima de ella, la caja cambia de
+color. Antes de poder resolver este ejercicio, hay que echar un vistazo a varias posibilidades de JQuery.*/
+$(document).ready(function(){
+    // si m epongo encima se pondra el color rosa
+    $("#texto").hover(function(){
+        $(this).css("background-color", "pink");
+    },
+    // si no me  pongo encima se pondra el color verde
+     function(){
+        $(this).css("background-color", "blue");
+    });
+    
+    
+}); 
+</script>
+</head>
+<body>
+
+<div id="texto">
+    <p>Este es un párrafo.</p>
+    <P>Maria Abascal Jiménez</P>
+
+</div>
+
+</body>
+</html> 
