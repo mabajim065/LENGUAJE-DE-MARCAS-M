@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    /*crear un programa que tenga varios parrafos con 4 botones que permitan que cuando se haga click en ellos ocurran distintas <cosas></cosas>
+    1. Habrá un botón con el texto «Ocultar pares». Cuando se hace click en él se ocultan los párrafos pares.
+    2. Habrá un botón con el texto «Ocultar impares». Cuando se hace click en él se ocultan los párrafos impares.
+    3. Habrá un botón con el texto «Mostrar pares». Cuando se hace click en él se muestran los párrafos pares (que tal vez estaban ocultos).
+    4. Habrá un botón con el texto «Mostrar impares». Cuando se hace click en él se muestran los párrafos impares (que tal vez estaban ocultos).*/
+
+    $(document).ready(function(){
+        // LOS $ SIRVEN PARA EJECUTAR LAS FUNCIONES DE JQUERY
+        // LOS # SIRVEN PARA EJECUTAR LAS FUNCIONES DE JAVASCRIPT
+        $("#ocultar_pares").click(function(){
+            $(".pares").fadeOut();
+        });
+        $("#ocultar_impares").click(function(){
+            $(".impares").fadeOut();
+        });
+        $("#mostrar_pares").click(function(){
+            $(".pares").fadeIn();
+        });
+        $("#mostrar_impares").click(function(){
+            $(".impares").fadeIn();
+        });
+    });
+</script>
+</head>
+<style>
+    p {background-color: #FFCBDB;}
+</style>
+<body>
+    <h1>Ejercicio 7</h1>
+    <br>
+    <p class="pares">ESTE ES EL PRIMER PARRAFO PAR .</p>
+    <p class="impares">ESTE ES EL PRIMER PARRAFO IMPAR.</p>
+    <p class="pares">ESTE ES EL SEGUNDO PARRAFO PAR.</p>
+    <p class="impares">ESTE ES EL SEGUNDO PARRAFO IMPAR.</p>
+    <p class="pares">ESTE ES EL TERCER PARRAFO PAR.</p>
+    <p class="impares">ESTE ES EL TERCER PARRAFO IMPAR.</p>
+
+    <!--este botón oculta los párrafos pares-->
+    <button id="ocultar_pares">Ocultar pares</button> 
+
+    <!--este botón oculta los párrafos impares-->
+    <button id="ocultar_impares">Ocultar impares</button> 
+
+    <!--este botón muestra los párrafos pares-->
+    <button id="mostrar_pares">Mostrar pares</button> 
+
+    <!--este botón muestra los párrafos impares-->
+    <button id="mostrar_impares">Mostrar impares</button> 
+</body>
+</html> 
+
