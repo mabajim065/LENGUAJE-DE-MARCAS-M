@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes de jQuery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<h2>Tipos de datos en JavaScript</h2>
+    <ul>
+        <li><strong>Números:</strong> Como 5, 3.14, etc.</li>
+        <li><strong>Cadenas:</strong> Texto, como "Hola" o "Juan".</li>
+        <li><strong>Booleanos:</strong> Solo tienen dos valores, <code>true</code> (verdadero) o <code>false</code> (falso).</li>
+        <li><strong>undefined:</strong> Cuando una variable no tiene valor porque no se ha creado.</li>
+        <li><strong>null:</strong> Para decir que algo está vacío intencionalmente.</li>
+    </ul>
+
+    <h2>"use strict" y por qué usarlo</h2>
+    <p>Antes, JavaScript permitía cosas como usar variables sin definirlas, lo que causaba errores raros. Si pones <code>"use strict"</code> al inicio de tu código, el lenguaje se vuelve más estricto.</p>
+    <pre><code>"use strict";
+let nombre = "Carmen"; // Bien
+apellido = "Diaz"; // Error, porque no usé "let"
+    </code></pre>
+
+    <h2>Constantes y variables</h2>
+    <pre><code>"use strict";
+const gravedad = 9.81; // No cambia
+let posicion = 42; // Puede cambiar
+    </code></pre>
+
+    <h2>Cómo unir textos (concatenación)</h2>
+    <p>Se puede hacer con <code>+</code> o con plantillas de ES6.</p>
+    <pre><code>let nombre = "Carmen";
+let apellido = "Diaz";
+let completo = `${nombre} ${apellido}`; // "Carmen Diaz"
+    </code></pre>
+
+    <h2>Poner JavaScript en HTML</h2>
+    <p>Para usar JavaScript en una página web, se coloca dentro de <code>&lt;script&gt;</code>.</p>
+    <pre><code>"use strict";
+let numero = 42;
+document.write(numero); // Escribe "42" en la página
+    </code></pre>
+
+    <h2>Decisiones con "if"</h2>
+    <pre><code>"use strict";
+let numero1 = 10;
+let numero2 = 5;
+if (numero1 > numero2) {
+    document.write("El primero es mayor");
+} else {
+    document.write("El segundo es mayor");
+}
+    </code></pre>
+
+    <h2>Bucles (loops)</h2>
+    <pre><code>let numeros = [1, 2, 3];
+for (let i = 0; i < numeros.length; i++) {
+    document.write(numeros[i] + "<br/>");
+}
+    </code></pre>
+
+    <h2>Ejercicio: Ordenar un array</h2>
+    <pre><code>let v = [9.98, 7.86, 4.53, 8.91, 5.76, 2.31];
+for (let i = 0; i < v.length; i++) {
+    for (let j = i + 1; j < v.length; j++) {
+        if (v[j] < v[i]) {
+            let aux = v[i];
+            v[i] = v[j];
+            v[j] = aux;
+        }
+    }
+}
+console.log(v);
+    </code></pre>
+
+    <h2>Funciones</h2>
+    <pre><code>function calcularMedia(vector) {
+    let suma = 0;
+    for (let pos in vector) {
+        suma += vector[pos];
+    }
+    return vector.length ? suma / vector.length : 0;
+}
+let media = calcularMedia([5, 2, 7, 8]); // 5.5
+    </code></pre>
+
+    <h2>Programación con objetos</h2>
+    <pre><code>let empleado = {
+    nombre: "Pepe Perez",
+    edad: 27,
+    fijo: true,
+    estaJubilado: function() {
+        return this.edad > 65;
+    }
+};
+document.write(empleado.nombre); // "Pepe Perez"
+    </code></pre>
+<body>
+    <h1>Apuntes de jQuery</h1>
+
+    <h2>¿Qué es jQuery?</h2>
+    <p>jQuery es una biblioteca de JavaScript que facilita la manipulación de elementos HTML (DOM), la gestión de eventos, las animaciones y las solicitudes AJAX. Su propósito es hacer que la programación en JavaScript sea más sencilla y rápida.</p>
+    <p>Fue creada para resolver las diferencias entre navegadores y ofrecer una sintaxis más clara y reducida.</p>
+
+    <h2>Cómo incluir jQuery en un proyecto</h2>
+    <p>Para usar jQuery, basta con incluir el siguiente enlace en la cabecera de nuestro archivo HTML:</p>
+    <pre><code>&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;</code></pre>
+    
+    <h2>Ejemplo 1: Hacer desaparecer un párrafo al hacer clic</h2>
+    <p>En este ejemplo, los párrafos desaparecen cuando se hace clic sobre ellos.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;If you click on me, I will disappear.&lt;/p&gt;
+&lt;p&gt;Click me away!&lt;/p&gt;
+&lt;p&gt;Click me too!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 2: Hacer desaparecer un párrafo al hacer doble clic</h2>
+    <p>En este ejemplo, los párrafos desaparecen cuando se hace doble clic sobre ellos.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("p").dblclick(function(){
+    $(this).hide();
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;If you double-click on me, I will disappear.&lt;/p&gt;
+&lt;p&gt;Click me away!&lt;/p&gt;
+&lt;p&gt;Click me too!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 3: Cambiar el color de fondo de un campo de texto cuando tiene el foco</h2>
+    <p>En este ejemplo, el color de fondo de un campo de texto cambia cuando recibe el foco y vuelve a cambiar cuando lo pierde.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt; 
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "green");
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+Name: &lt;input type="text" name="fullname"&gt;&lt;br&gt;
+Email: &lt;input type="text" name="email"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 4: Ocultar los párrafos con un botón</h2>
+    <p>En este ejemplo, los párrafos se ocultan cuando se hace clic en el botón.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;This is a heading&lt;/h2&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;button&gt;Click me to hide paragraphs&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 5: Ocultar un elemento específico con un botón</h2>
+    <p>Este ejemplo muestra cómo ocultar un párrafo específico cuando se hace clic en un botón.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").hide();
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;This is a heading&lt;/h2&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p id="test"&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;button&gt;Click me&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 6: Ocultar elementos con una clase específica con un botón</h2>
+    <p>En este ejemplo, todos los elementos con la clase "test" se ocultan cuando se hace clic en el botón.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".test").hide();
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2 class="test"&gt;This is a heading&lt;/h2&gt;
+
+&lt;p class="test"&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;button&gt;Click me&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 7: FadeIn con diferentes velocidades</h2>
+    <p>En este ejemplo, se demuestra cómo utilizar el método `fadeIn()` con diferentes velocidades para mostrar elementos.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Demonstrate fadeIn() with different parameters.&lt;/p>
+
+&lt;button&gt;Click to fade in boxes&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div id="div1" style="width:80px;height:80px;display:none;background-color:red;"&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div id="div2" style="width:80px;height:80px;display:none;background-color:green;"&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 8: FadeToggle con diferentes velocidades</h2>
+    <p>En este ejemplo, se demuestra cómo utilizar el método `fadeToggle()` con diferentes velocidades para alternar la visibilidad de los elementos.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Demonstrate fadeToggle() with different speed parameters.&lt;/p>
+
+&lt;button&gt;Click to fade in/out boxes&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div id="div1" style="width:80px;height:80px;background-color:red;"&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;div id="div2" style="width:80px;height:80px;background-color:green;"&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;div id="div3" style="width:80px;height:80px;background-color:blue;"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Ejemplo 9: Desplegar un panel con un botón</h2>
+    <p>En este ejemplo, un panel se despliega al hacer clic en un botón.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt; 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+&lt;/script&gt;
+&lt;style&gt; 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div id="flip"&gt;Click to slide down panel&lt;/div&gt;
+&lt;div id="panel"&gt;Hello world!&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</body>
+</html>
