@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Define el título de la página -->
+    <title>Pólizas de seguros</title>
+    <!-- Establece la codificación de caracteres a UTF-8 para soportar caracteres especiales -->
+    <meta charset="utf-8">
+</head>
+<body>
+    <!-- Crea un formulario para capturar los datos del usuario -->
+    <form>
+        <!-- Sección para seleccionar la antigüedad del vehículo -->
+        <strong>Antigüedad</strong><br/>
+        <!-- Radio button para antigüedad menor a 6 años, al hacer clic ejecuta la función calcular() -->
+        <input type="radio" name="antiguedad" id="menos" onclick="calcular();">
+        <!-- Etiqueta para el radio button, muestra "< de 6" -->
+        <label for="menos">&lt; de 6 años</label><br/>
+        <!-- Radio button para antigüedad mayor a 6 años, al hacer clic ejecuta la función calcular() -->
+        <input type="radio" name="antiguedad" id="mas" onclick="calcular();">
+        <!-- Etiqueta para el radio button, muestra "> de 6" -->
+        <label for="mas">&gt; de 6 años</label><br/>
+
+        <!-- Sección para seleccionar el tipo de vehículo -->
+        <strong>Tipo de vehículo</strong><br/>
+        <!-- Menú desplegable para seleccionar el tipo de vehículo -->
+        <!-- Se usa onchange en lugar de onclick para detectar cambios en la selección -->
+        <select id="vehiculo" onchange="calcular();">
+            <!-- Opción por defecto para vehículo familiar -->
+            <option value="familiar">Familiar</option>
+            <!-- Opción para vehículo comercial -->
+            <option value="comercial">Comercial</option>
+            <!-- Opción para vehículo deportivo -->
+            <option value="deportivo">Deportivo</option>
+        </select>
+        <br/>
+
+        <!-- Sección para la situación familiar -->
+        <strong>Situación familiar</strong><br/>
+        <!-- Checkbox para indicar si tiene hijos a cargo, al cambiar ejecuta calcular() -->
+        <input type="checkbox" id="conhijos" onclick="calcular();">
+        <!-- Etiqueta para el checkbox de hijos -->
+        <label for="conhijos">Con hijos a cargo</label><br/>
+        <!-- Checkbox para indicar si tiene padres a cargo, al cambiar ejecuta calcular() -->
+        <input type="checkbox" id="conpadres" onclick="calcular();">
+        <!-- Etiqueta para el checkbox de padres -->
+        <label for="conpadres">Con padres a cargo</label><br/>
+
+        <!-- Div donde se mostrará el resultado del cálculo -->
+        <div id="resultado"></div>
+
+        <!-- Incluye el archivo JavaScript que contiene la función calcular() -->
+        <script type="text/javascript" src="polizaseguros.js"></script>
+    </form>
+</body>
+</html>
