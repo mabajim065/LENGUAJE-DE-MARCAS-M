@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+/*Realizar una calculadora en la que aparezcan los diez primeros numeros del 0 al 9 y las funciones de sumar , restar, multiplicar y dividir con jquery*/
+$(document).ready(function(){
+    //funcion de sumar
+    $("#sumar").click(function(){
+        $("#resultado").html($("#numero1").val() + $("#numero2").val());
+    });
+    //funcion de restar
+    $("#restar").click(function(){
+        $("#resultado").html($("#numero1").val() - $("#numero2").val());
+    });
+    //funcion de multiplicar
+    $("#multiplicar").click(function(){
+        $("#resultado").html($("#numero1").val() * $("#numero2").val());
+    });
+    //funcion de dividir
+    $("#dividir").click(function(){
+        $("#resultado").html($("#numero1").val() / $("#numero2").val());
+    });
+});
+</script>
+</head>
+<body>
+
+<!--crear diez botones para cada numero del 0 al 9-->
+<!-- creo input para cada numero-->
+<input type="text" id="numero1" value="0">
+<input type="text" id="numero2" value="0">
+<!--crear diez botones para las funciones de sumar , restar, multiplicar y dividir-->
+<button id="sumar">Sumar</button>
+<button id="restar">Restar</button>
+<button id="multiplicar">Multiplicar</button>
+<button id="dividir">Dividir</button>
+
+<p id="resultado"></p>
+
+</body>
+</html> 
