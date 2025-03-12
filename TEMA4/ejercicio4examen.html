@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="JQUERY.js"></script>
+<script>
+    /*tres parrafos con un botón que cuando se haga click en él se muestra un mensaje*/
+    $(document).ready(function(){
+        $("#boton").click(function(){
+            $("#mensaje").fadeIn();
+        });
+    });
+    /*si pincho en el mismo enlace debe de cambiar a mostrar contenido ysi vuelva a mostrar el texto original*/
+    $(document).ready(function(){
+        $("#boton").click(function(){
+            $("#mensaje").fadeIn();
+        });
+     });
+     /*se debe utilizar la fuhncion "muestraOculta" que sera la que llame el boton para desaparecer o aparecer*/
+     function muestraOculta(){
+         $("#mensaje").fadeToggle();
+     }
+</script>
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    <br>
+    <p id="mensaje">Este es el mensaje que se muestra</p>
+    <button id="boton">Botón</button>
