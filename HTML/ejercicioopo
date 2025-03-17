@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclaje para Niños</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffcc00;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        /* Estilo de la barra de navegación */
+        nav {
+            background-color: #ff5733;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        /* Título principal con diseño llamativo */
+        .titulo {
+            font-size: 3em;
+            color: #33cc33;
+            text-shadow: 5px 5px 5px black;
+            background: url('https://www.aula21.net/cazas/cazasaula21/reciclaje.gif') no-repeat center;
+            background-size: contain;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Información del autor */
+        .autor {
+            background-color: #3366ff;
+            color: rgb(134, 190, 241);
+            font-weight: bold;
+            padding: 15px;
+            text-align: left;
+            border-radius: 10px;
+        }
+        /* Secciones generales con estilos llamativos */
+        .seccion {
+            padding: 20px;
+            margin: 15px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            font-size: 1.3em;
+        }
+        .intro { background-color: #66ccff; color: white; display: flex; border: 5px dashed white; }
+        .preguntas { background-color: #d391ff; color: black; text-align: left; font-size: 1.2em; border: 5px solid red; }
+        .recursos { background-color: lightgreen; color: black; text-align: left; font-size: 1.2em; border: 5px dotted green; }
+        .granpregunta { background-color: pink; color: black; text-align: left; font-size: 1.3em; border: 5px double purple; }
+        .evaluacion { background-color: orange; color: black; text-align: left; font-size: 1.3em; border: 5px groove brown; }
+        .creditos { background-color: lavender; color: black; text-align: left; font-size: 1.2em; border: 5px inset blue; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { border: 2px solid black; padding: 15px; background-color: #ffff99; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#introduccion">Introducción</a>
+            <a href="#preguntas">Preguntas</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#granpregunta">La Gran Pregunta</a>
+            <a href="#evaluacion">Evaluación</a>
+            <a href="#creditos">Créditos</a>
+        </nav>
+        <h1 class="titulo">♻️ Reciclaje Divertido ♻️</h1>
+    </header>
+    <section class="autor">
+        <p><strong>Autor:</strong> Natalia Maria Jiménez Canto</p>
+        <p><strong>Área:</strong> Ciencias</p>
+        <p><strong>Nivel:</strong> Primaria </p>
+    </section>
+    <section id="introduccion" class="seccion intro">
+        <h2>INTRODUCCIÓN 🤔</h2>
+      <!--  esto a sido cambiado por maria -->
+        <p>🌍✨¡Conviértete en un HÉROE del PLANETA! 🌱♻️  ¿Sabías que los países más avanzados no son los que más basura tiran, sino los que mejor la reciclan? 🏆🌎 
+            ¡Y tú puedes ayudar a salvar el mundo! 💪💚Cada vez que reciclas, le das una segunda vida a los materiales y ayudas a que la Tierra siga siendo un lugar bonito 
+            y sano para todos. 🚀 En esta aventura, descubrirás por qué es tan importante cuidar el medioambiente y cómo puedes hacerlo. ¡Vamos, el planeta cuenta contigo! 🌟♻️</p>
+    </section>
+    <section id="preguntas" class="seccion preguntas">
+        <h2>PREGUNTAS ❓</h2>
+        <p>1.- ¿Cuál es la materia prima para la fabricación de papel?</p>
+        <p>2.- ¿Por qué crees que es necesario reciclar el papel?</p>
+    </section>
+    <section id="recursos" class="seccion recursos">
+        <h2>RECURSOS</h2>
+        <table>
+            <tr>
+                <td>Página 1</td>
+                <td><a href="http://www.iespana.es/natureduca/activ_reciclaje_papel.htm">http://www.iespana.es/natureduca/activ_reciclaje_papel.htm</a></td>
+            </tr>
+            <tr>
+                <td>Página 2</td>
+                <td><a href="http://www.recicla.com/index.htm">http://www.recicla.com/index.htm</a></td>
+            </tr>
+            <tr>
+                <td>Página 3</td>
+                <td><a href=" http://alternativa-joven.org/extrenatura/sub4/rrr.html"> http://alternativa-joven.org/extrenatura/sub4/rrr.html</a></td>
+            </tr>
+        </table>
+    </section>
+    <section id="granpregunta" class="seccion granpregunta">
+        <h2>LA GRAN PREGUNTA 🔊</h2>
+        <p>Vamos a probar tu idea sobre el reciclado: ¿ Qué porcentaje de la basura doméstica crees que se puede reciclar?...(piensatelo y contesta)...Ahora busca en la página 2 y comprueba.</p>
+    </section>
+    <section id="evaluacion" class="seccion evaluacion">
+        <h2>EVALUACIÓN 📚</h2>
+        <p>Vamos a ver qué tan bien lo hiciste.✍️ Lo más importante es que expliques bien tus respuestas, escribas con claridad y sigas las reglas del lenguaje. ¡Así aprenderemos juntos de la mejor manera! 🎉📖</p>
+    </section>
+    <section id="creditos" class="seccion creditos">
+        <h2>CRÉDITOS</h2>
+        <p>Agradecemos a los autores de las páginas que es mi hija Maria que es la mas guapa del mundo y obviamente mi hija favorita...</p>
+    </section>
+</body>
+</html>
