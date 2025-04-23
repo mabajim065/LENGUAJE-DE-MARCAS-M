@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Coches</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .grupo {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .grupo h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    label {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    #resultado {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      color: rgb(255, 111, 219);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Selección de Características del Vehículo</h2>
+
+  <!-- Formulario principal -->
+  <form id="formulario">
+
+    <!-- Grupo: Motor -->
+    <div class="grupo">
+      <h3>Tipo de motor</h3>
+      <label><input type="radio" name="motor" value="Gasolina">Gasolina</label>
+      <label><input type="radio" name="motor" value="Diésel">Diésel</label>
+      <label><input type="radio" name="motor" value="Híbrido">Híbrido</label>
+      <label><input type="radio" name="motor" value="Eléctrico">Eléctrico</label>
+    </div>
+
+    <!-- Grupo: Transmisión -->
+    <div class="grupo">
+      <h3>Transmisión</h3>
+      <label><input type="radio" name="transmision" value="Manual">Manual</label>
+      <label><input type="radio" name="transmision" value="Automática">Automática</label>
+      <label><input type="radio" name="transmision" value="CVT">CVT</label>
+      <label><input type="radio" name="transmision" value="Doble embrague">Doble embrague</label>
+    </div>
+
+    <!-- Grupo: Tracción -->
+    <div class="grupo">
+      <h3>Tracción</h3>
+      <label><input type="radio" name="traccion" value="Delantera (FWD)">Delantera (FWD)</label>
+      <label><input type="radio" name="traccion" value="Trasera (RWD)">Trasera (RWD)</label>
+      <label><input type="radio" name="traccion" value="Total o integral (AWD, 4x4)">Total o integral (AWD, 4x4)</label>
+    </div>
+
+    <!-- Grupo: Carrocería -->
+    <div class="grupo">
+      <h3>Tipo de carrocería</h3>
+      <label><input type="radio" name="carroceria" value="Sedán">Sedán</label>
+      <label><input type="radio" name="carroceria" value="Hatchback">Hatchback</label>
+      <label><input type="radio" name="carroceria" value="SUV">SUV</label>
+      <label><input type="radio" name="carroceria" value="Coupé">Coupé</label>
+      <label><input type="radio" name="carroceria" value="Cabrio/Descapotable">Cabrio/Descapotable</label>
+      <label><input type="radio" name="carroceria" value="Familiar">Familiar</label>
+      <label><input type="radio" name="carroceria" value="Pick-up">Pick-up</label>
+      <label><input type="radio" name="carroceria" value="Monovolumen">Monovolumen</label>
+    </div>
+
+    <!-- Grupo: Puertas -->
+    <div class="grupo">
+      <h3>Número de puertas</h3>
+      <label><input type="radio" name="puertas" value="2">2 puertas</label>
+      <label><input type="radio" name="puertas" value="3">3 puertas</label>
+      <label><input type="radio" name="puertas" value="4">4 puertas</label>
+      <label><input type="radio" name="puertas" value="5">5 puertas</label>
+    </div>
+
+    <!-- Botón para enviar -->
+    <button type="submit">Generar prompt</button>
+  </form>
+
+  <!-- Resultado -->
+  <div id="resultado"></div>
+
+  <!-- Script JS -->
+  <script>
+    // Escuchamos cuando se envía el formulario (cuando se da al botón)
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+      e.preventDefault(); // Evita que la página se recargue
+
+      // Obtenemos las opciones seleccionadas
+      const motor = document.querySelector('input[name="motor"]:checked')?.value;
+      const transmision = document.querySelector('input[name="transmision"]:checked')?.value;
+      const traccion = document.querySelector('input[name="traccion"]:checked')?.value;
+      const carroceria = document.querySelector('input[name="carroceria"]:checked')?.value;
+      const puertas = document.querySelector('input[name="puertas"]:checked')?.value;
+
+      // Comprobamos si falta alguna selección
+      if (!motor || !transmision || !traccion || !carroceria || !puertas) {
+        document.getElementById("resultado").textContent = "Por favor, selecciona todas las opciones.";
+        return;
+      }
+
+      // Creamos el prompt personalizado
+      const prompt = `Quiero los 3 mejores coches que sean de motor ${motor} con transmisión ${transmision}, que tengan tracción ${traccion}, tipo de carrocería ${carroceria} y con ${puertas} puertas.`;
+
+      // Mostramos el resultado
+      document.getElementById("resultado").textContent = prompt;
+    });
+  </script>
+
+</body>
+</html>
