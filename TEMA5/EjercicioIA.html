@@ -48,10 +48,7 @@
 
   <h2>Selección de Características del Vehículo</h2>
 
-  <!-- Formulario principal -->
   <form id="formulario">
-
-    <!-- Grupo: Motor -->
     <div class="grupo">
       <h3>Tipo de motor</h3>
       <label><input type="radio" name="motor" value="Gasolina">Gasolina</label>
@@ -60,7 +57,6 @@
       <label><input type="radio" name="motor" value="Eléctrico">Eléctrico</label>
     </div>
 
-    <!-- Grupo: Transmisión -->
     <div class="grupo">
       <h3>Transmisión</h3>
       <label><input type="radio" name="transmision" value="Manual">Manual</label>
@@ -69,7 +65,6 @@
       <label><input type="radio" name="transmision" value="Doble embrague">Doble embrague</label>
     </div>
 
-    <!-- Grupo: Tracción -->
     <div class="grupo">
       <h3>Tracción</h3>
       <label><input type="radio" name="traccion" value="Delantera (FWD)">Delantera (FWD)</label>
@@ -77,7 +72,6 @@
       <label><input type="radio" name="traccion" value="Total o integral (AWD, 4x4)">Total o integral (AWD, 4x4)</label>
     </div>
 
-    <!-- Grupo: Carrocería -->
     <div class="grupo">
       <h3>Tipo de carrocería</h3>
       <label><input type="radio" name="carroceria" value="Sedán">Sedán</label>
@@ -90,7 +84,6 @@
       <label><input type="radio" name="carroceria" value="Monovolumen">Monovolumen</label>
     </div>
 
-    <!-- Grupo: Puertas -->
     <div class="grupo">
       <h3>Número de puertas</h3>
       <label><input type="radio" name="puertas" value="2">2 puertas</label>
@@ -99,38 +92,48 @@
       <label><input type="radio" name="puertas" value="5">5 puertas</label>
     </div>
 
-    <!-- Botón para enviar -->
     <button type="submit">Generar prompt</button>
   </form>
 
-  <!-- Resultado -->
   <div id="resultado"></div>
 
-  <!-- Script JS -->
   <script>
-    // Escuchamos cuando se envía el formulario (cuando se da al botón)
-    document.getElementById("formulario").addEventListener("submit", function(e) {
-      e.preventDefault(); // Evita que la página se recargue
+    document.getElementById("formulario").addEventListener("submit", async function(e) {
+      e.preventDefault();
 
-      // Obtenemos las opciones seleccionadas
       const motor = document.querySelector('input[name="motor"]:checked')?.value;
       const transmision = document.querySelector('input[name="transmision"]:checked')?.value;
       const traccion = document.querySelector('input[name="traccion"]:checked')?.value;
       const carroceria = document.querySelector('input[name="carroceria"]:checked')?.value;
       const puertas = document.querySelector('input[name="puertas"]:checked')?.value;
 
-      // Comprobamos si falta alguna selección
       if (!motor || !transmision || !traccion || !carroceria || !puertas) {
         document.getElementById("resultado").textContent = "Por favor, selecciona todas las opciones.";
         return;
       }
 
-      // Creamos el prompt personalizado
-      const prompt = `Quiero los 3 mejores coches que sean de motor ${motor} con transmisión ${transmision}, que tengan tracción ${traccion}, tipo de carrocería ${carroceria} y con ${puertas} puertas.`;
+      const formData = new URLSearchParams();
+      formData.append("motor", motor);
+      formData.append("transmision", transmision);
+      formData.append("traccion", traccion);
+      formData.append("carroceria", carroceria);
+      formData.append("puertas", puertas);
 
-      // Mostramos el resultado
-      document.getElementById("resultado").textContent = prompt;
+      try {
+        const res = await fetch("https://magicloops.dev/api/loop/run/5521d99a-1aa8-45dd-b8be-23e8740f332b", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: formData.toString()
+        });
+
+        const data = await res.text(); // Cambié .json() a .text() para que te devuelva el texto directamente
+        document.getElementById("resultado").textContent = data || "Respuesta recibida sin texto.";
+      } catch (err) {
+        console.error(err);
+        document.getElementById("resultado").textContent = "Error al contactar con la IA.";
+      }
     });
+    
   </script>
 
 </body>
