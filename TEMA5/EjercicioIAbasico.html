@@ -45,30 +45,54 @@
   </style>
 <body>
 
-  <h1>Encuentra tu coche ideal 🚗</h1>
+  <h2>Selección de Características del Vehículo</h2>
 
-  <!-- Formulario muy sencillo -->
-  <form id="formularioCoche">
-    <label>Motor:</label>
-    <input type="text" id="motor" required><br><br>
+  <form id="formulario">
+    <div class="grupo">
+      <h3>Tipo de motor</h3>
+      <label><input type="radio" name="motor" value="Gasolina">Gasolina</label>
+      <label><input type="radio" name="motor" value="Diésel">Diésel</label>
+      <label><input type="radio" name="motor" value="Híbrido">Híbrido</label>
+      <label><input type="radio" name="motor" value="Eléctrico">Eléctrico</label>
+    </div>
 
-    <label>Transmisión:</label>
-    <input type="text" id="transmision" required><br><br>
+    <div class="grupo">
+      <h3>Transmisión</h3>
+      <label><input type="radio" name="transmision" value="Manual">Manual</label>
+      <label><input type="radio" name="transmision" value="Automática">Automática</label>
+      <label><input type="radio" name="transmision" value="CVT">CVT</label>
+      <label><input type="radio" name="transmision" value="Doble embrague">Doble embrague</label>
+    </div>
 
-    <label>Tracción:</label>
-    <input type="text" id="traccion" required><br><br>
+    <div class="grupo">
+      <h3>Tracción</h3>
+      <label><input type="radio" name="traccion" value="Delantera (FWD)">Delantera (FWD)</label>
+      <label><input type="radio" name="traccion" value="Trasera (RWD)">Trasera (RWD)</label>
+      <label><input type="radio" name="traccion" value="Total o integral (AWD, 4x4)">Total o integral (AWD, 4x4)</label>
+    </div>
 
-    <label>Carrocería:</label>
-    <input type="text" id="carroceria" required><br><br>
+    <div class="grupo">
+      <h3>Tipo de carrocería</h3>
+      <label><input type="radio" name="carroceria" value="Sedán">Sedán</label>
+      <label><input type="radio" name="carroceria" value="Hatchback">Hatchback</label>
+      <label><input type="radio" name="carroceria" value="SUV">SUV</label>
+      <label><input type="radio" name="carroceria" value="Coupé">Coupé</label>
+      <label><input type="radio" name="carroceria" value="Cabrio/Descapotable">Cabrio/Descapotable</label>
+      <label><input type="radio" name="carroceria" value="Familiar">Familiar</label>
+      <label><input type="radio" name="carroceria" value="Pick-up">Pick-up</label>
+      <label><input type="radio" name="carroceria" value="Monovolumen">Monovolumen</label>
+    </div>
 
-    <label>Puertas:</label>
-    <input type="number" id="puertas" required><br><br>
+    <div class="grupo">
+      <h3>Número de puertas</h3>
+      <label><input type="radio" name="puertas" value="2">2 puertas</label>
+      <label><input type="radio" name="puertas" value="3">3 puertas</label>
+      <label><input type="radio" name="puertas" value="4">4 puertas</label>
+      <label><input type="radio" name="puertas" value="5">5 puertas</label>
+    </div>
 
     <button type="submit">Buscar coches</button>
   </form>
-
-  <!-- Aquí se mostrará la respuesta -->
-  <div id="resultado" style="margin-top:20px; font-weight: bold;"></div>
 
   <script>
     // Capturamos el formulario
