@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Coches</title>
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .grupo {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .grupo h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    label {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    #resultado {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      color: rgb(255, 111, 219);
+    }
+  </style>
+<body>
+
+  <h1>Encuentra tu coche ideal 🚗</h1>
+
+  <!-- Formulario muy sencillo -->
+  <form id="formularioCoche">
+    <label>Motor:</label>
+    <input type="text" id="motor" required><br><br>
+
+    <label>Transmisión:</label>
+    <input type="text" id="transmision" required><br><br>
+
+    <label>Tracción:</label>
+    <input type="text" id="traccion" required><br><br>
+
+    <label>Carrocería:</label>
+    <input type="text" id="carroceria" required><br><br>
+
+    <label>Puertas:</label>
+    <input type="number" id="puertas" required><br><br>
+
+    <button type="submit">Buscar coches</button>
+  </form>
+
+  <!-- Aquí se mostrará la respuesta -->
+  <div id="resultado" style="margin-top:20px; font-weight: bold;"></div>
+
+  <script>
+    // Capturamos el formulario
+    const formulario = document.getElementById('formularioCoche');
+
+    // Cuando se envíe el formulario
+    formulario.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Para que no recargue la página
+
+      // Recoger valores
+      const motor = document.getElementById('motor').value;
+      const transmision = document.getElementById('transmision').value;
+      const traccion = document.getElementById('traccion').value;
+      const carroceria = document.getElementById('carroceria').value;
+      const puertas = document.getElementById('puertas').value;
+
+      // Crear el mensaje para enviarle a la IA
+      const prompt = `Recomiéndame 3 coches que tengan: motor ${motor}, transmisión ${transmision}, tracción ${traccion}, carrocería ${carroceria} y ${puertas} puertas. Da la respuesta en una frase sencilla en español.`;
+
+      // Llamar a la IA (esto puede ser ChatGPT API o como lo tengas configurado)
+      // Como no quieres líos de APIs, aquí ponemos un "simulado":
+      
+      // Resultado simulado
+      const respuestaSimulada = `Basado en tus preferencias de motor ${motor}, transmisión ${transmision} y tracción ${traccion}, te recomiendo: Ford Mustang, BMW Serie 3, Mazda MX-5.`
+
+      // Mostrarlo en pantalla
+      document.getElementById('resultado').textContent = respuestaSimulada;
+
+      // Si en el futuro quieres conectar a una IA real, aquí pondrías el fetch
+    });
+  </script>
+
+</body>
+</html>

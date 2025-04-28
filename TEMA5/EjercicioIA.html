@@ -92,48 +92,34 @@
       <label><input type="radio" name="puertas" value="5">5 puertas</label>
     </div>
 
-    <button type="submit">Generar prompt</button>
+    <button type="submit">Buscar coches</button>
   </form>
 
   <div id="resultado"></div>
 
   <script>
-    document.getElementById("formulario").addEventListener("submit", async function(e) {
+    document.getElementById("formulario").addEventListener("submit", function(e) {
       e.preventDefault();
 
+      // Recogemos las opciones seleccionadas
       const motor = document.querySelector('input[name="motor"]:checked')?.value;
       const transmision = document.querySelector('input[name="transmision"]:checked')?.value;
       const traccion = document.querySelector('input[name="traccion"]:checked')?.value;
       const carroceria = document.querySelector('input[name="carroceria"]:checked')?.value;
       const puertas = document.querySelector('input[name="puertas"]:checked')?.value;
 
+      // Comprobamos si el usuario ha seleccionado todo
       if (!motor || !transmision || !traccion || !carroceria || !puertas) {
         document.getElementById("resultado").textContent = "Por favor, selecciona todas las opciones.";
         return;
       }
 
-      const formData = new URLSearchParams();
-      formData.append("motor", motor);
-      formData.append("transmision", transmision);
-      formData.append("traccion", traccion);
-      formData.append("carroceria", carroceria);
-      formData.append("puertas", puertas);
+      // Generamos la frase que la IA podrá entender
+      const frase = `Quiero un coche con motor ${motor}, transmisión ${transmision}, tracción ${traccion}, carrocería ${carroceria} y ${puertas} puertas.`;
 
-      try {
-        const res = await fetch("https://magicloops.dev/api/loop/run/5521d99a-1aa8-45dd-b8be-23e8740f332b", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: formData.toString()
-        });
-
-        const data = await res.text(); // Cambié .json() a .text() para que te devuelva el texto directamente
-        document.getElementById("resultado").textContent = data || "Respuesta recibida sin texto.";
-      } catch (err) {
-        console.error(err);
-        document.getElementById("resultado").textContent = "Error al contactar con la IA.";
-      }
+      // Mostramos la frase para que el usuario la ingrese en la IA
+      document.getElementById("resultado").textContent = `Puedes ingresar esta frase a la IA: "${frase}" para obtener recomendaciones de coches.`;
     });
-    
   </script>
 
 </body>
