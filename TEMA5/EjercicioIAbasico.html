@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Buscador de Coches</title>
-</head>
-<style>
+  <title>Formulario de Coches</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
@@ -43,6 +42,8 @@
       color: rgb(255, 111, 219);
     }
   </style>
+</head>
+
 <body>
 
   <h2>Selección de Características del Vehículo</h2>
@@ -90,39 +91,73 @@
       <label><input type="radio" name="puertas" value="4">4 puertas</label>
       <label><input type="radio" name="puertas" value="5">5 puertas</label>
     </div>
-
     <button type="submit">Buscar coches</button>
   </form>
 
+  <div id="resultado"></div>
+
   <script>
-    // Capturamos el formulario
-    const formulario = document.getElementById('formularioCoche');
+    document.getElementById("formulario").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    // Cuando se envíe el formulario
-    formulario.addEventListener('submit', async function(event) {
-      event.preventDefault(); // Para que no recargue la página
+      const motor = document.querySelector('input[name="motor"]:checked')?.value;
+      const transmision = document.querySelector('input[name="transmision"]:checked')?.value;
+      const traccion = document.querySelector('input[name="traccion"]:checked')?.value;
+      const carroceria = document.querySelector('input[name="carroceria"]:checked')?.value;
+      const puertas = document.querySelector('input[name="puertas"]:checked')?.value;
 
-      // Recoger valores
-      const motor = document.getElementById('motor').value;
-      const transmision = document.getElementById('transmision').value;
-      const traccion = document.getElementById('traccion').value;
-      const carroceria = document.getElementById('carroceria').value;
-      const puertas = document.getElementById('puertas').value;
+      if (!motor || !transmision || !traccion || !carroceria || !puertas) {
+        alert("Por favor, selecciona todas las opciones.");
+        return;
+      }
 
-      // Crear el mensaje para enviarle a la IA
-      const prompt = `Recomiéndame 3 coches que tengan: motor ${motor}, transmisión ${transmision}, tracción ${traccion}, carrocería ${carroceria} y ${puertas} puertas. Da la respuesta en una frase sencilla en español.`;
-
-      // Llamar a la IA (esto puede ser ChatGPT API o como lo tengas configurado)
-      // Como no quieres líos de APIs, aquí ponemos un "simulado":
-      
-      // Resultado simulado
-      const respuestaSimulada = `Basado en tus preferencias de motor ${motor}, transmisión ${transmision} y tracción ${traccion}, te recomiendo: Ford Mustang, BMW Serie 3, Mazda MX-5.`
-
-      // Mostrarlo en pantalla
-      document.getElementById('resultado').textContent = respuestaSimulada;
-
-      // Si en el futuro quieres conectar a una IA real, aquí pondrías el fetch
+      obtenerOpcionesCoches(motor, transmision, traccion, carroceria, puertas);
     });
+
+    async function obtenerOpcionesCoches(motor, transmision, traccion, carroceria, puertas) {
+      try {
+        const params = new URLSearchParams();
+        params.append("motor", motor);
+        params.append("transmision", transmision);
+        params.append("traccion", traccion);
+        params.append("carroceria", carroceria);
+        params.append("puertas", puertas);
+
+        const endpoint = "https://magicloops.dev/api/loop/50ccde6f-7f58-4f46-81dd-858e4ffa3df6/run?input=I+love+Magic+Loops%21";
+const response = await fetch(endpoint, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: params.toString()
+});
+
+        const data = await response.json();
+        mostrarOpciones(data);
+      } catch (error) {
+        console.error("Error al obtener opciones de coches:", error);
+        document.getElementById("resultado").innerText = "Ocurrió un error al buscar coches.";
+      }
+    }
+
+    function mostrarOpciones(data) {
+      const contenedor = document.getElementById("resultado");
+      contenedor.innerHTML = "";
+
+      if (!data?.opciones || data.opciones.length === 0) {
+        contenedor.textContent = "No se encontraron coches con esas características, lo siento.";
+        return;
+      }
+
+      data.opciones.forEach(coche => {
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <h3>${coche.marca} - ${coche.modelo}</h3>
+          <p>${coche.descripcion}</p>
+        `;
+        contenedor.appendChild(div);
+      });
+    }
   </script>
 
 </body>
