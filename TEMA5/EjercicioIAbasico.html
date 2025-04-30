@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Formulario de Coches</title>
   <style>
+    /* Estilos básicos para el cuerpo y formularios */
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
@@ -39,7 +40,7 @@
       margin-top: 25px;
       font-weight: bold;
       font-size: 16px;
-      color: rgb(255, 111, 219);
+      color: rgb(255, 111, 219); /* Rosa flamenco 😄 */
     }
   </style>
 </head>
@@ -48,7 +49,9 @@
 
   <h2>Selección de Características del Vehículo</h2>
 
+  <!-- FORMULARIO -->
   <form id="formulario">
+    <!-- GRUPO 1: Tipo de motor -->
     <div class="grupo">
       <h3>Tipo de motor</h3>
       <label><input type="radio" name="motor" value="Gasolina">Gasolina</label>
@@ -57,6 +60,7 @@
       <label><input type="radio" name="motor" value="Eléctrico">Eléctrico</label>
     </div>
 
+    <!-- GRUPO 2: Transmisión -->
     <div class="grupo">
       <h3>Transmisión</h3>
       <label><input type="radio" name="transmision" value="Manual">Manual</label>
@@ -65,6 +69,7 @@
       <label><input type="radio" name="transmision" value="Doble embrague">Doble embrague</label>
     </div>
 
+    <!-- GRUPO 3: Tracción -->
     <div class="grupo">
       <h3>Tracción</h3>
       <label><input type="radio" name="traccion" value="Delantera (FWD)">Delantera (FWD)</label>
@@ -72,6 +77,7 @@
       <label><input type="radio" name="traccion" value="Total o integral (AWD, 4x4)">Total o integral (AWD, 4x4)</label>
     </div>
 
+    <!-- GRUPO 4: Carrocería -->
     <div class="grupo">
       <h3>Tipo de carrocería</h3>
       <label><input type="radio" name="carroceria" value="Sedán">Sedán</label>
@@ -84,6 +90,7 @@
       <label><input type="radio" name="carroceria" value="Monovolumen">Monovolumen</label>
     </div>
 
+    <!-- GRUPO 5: Número de puertas -->
     <div class="grupo">
       <h3>Número de puertas</h3>
       <label><input type="radio" name="puertas" value="2">2 puertas</label>
@@ -91,31 +98,40 @@
       <label><input type="radio" name="puertas" value="4">4 puertas</label>
       <label><input type="radio" name="puertas" value="5">5 puertas</label>
     </div>
+
     <button type="submit">Buscar coches</button>
   </form>
 
+  <!-- RESULTADO -->
   <div id="resultado"></div>
 
+  <!-- SCRIPT DE FUNCIONAMIENTO -->
   <script>
+    // Al enviar el formulario
     document.getElementById("formulario").addEventListener("submit", function (e) {
-      e.preventDefault();
+      e.preventDefault(); // Previene que recargue la página
 
+      // Obtenemos los valores seleccionados de cada grupo
       const motor = document.querySelector('input[name="motor"]:checked')?.value;
       const transmision = document.querySelector('input[name="transmision"]:checked')?.value;
       const traccion = document.querySelector('input[name="traccion"]:checked')?.value;
       const carroceria = document.querySelector('input[name="carroceria"]:checked')?.value;
       const puertas = document.querySelector('input[name="puertas"]:checked')?.value;
 
+      // Si falta alguna opción, muestra una alerta
       if (!motor || !transmision || !traccion || !carroceria || !puertas) {
         alert("Por favor, selecciona todas las opciones.");
         return;
       }
 
+      // Llamamos a la función que hace la consulta a la API
       obtenerOpcionesCoches(motor, transmision, traccion, carroceria, puertas);
     });
 
+    // Función que llama a la API y muestra los resultados
     async function obtenerOpcionesCoches(motor, transmision, traccion, carroceria, puertas) {
       try {
+        // Creamos los parámetros a enviar (como si fuera un formulario normal)
         const params = new URLSearchParams();
         params.append("motor", motor);
         params.append("transmision", transmision);
@@ -123,32 +139,43 @@
         params.append("carroceria", carroceria);
         params.append("puertas", puertas);
 
+        // URL de tu API (puedes cambiarla si usas otra)
         const endpoint = "https://magicloops.dev/api/loop/50ccde6f-7f58-4f46-81dd-858e4ffa3df6/run?input=I+love+Magic+Loops%21";
-const response = await fetch(endpoint, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded"
-  },
-  body: params.toString()
-});
 
+        // Hacemos la petición POST con los datos del formulario
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded" // Tipo de contenido para formularios
+          },
+          body: params.toString() // Convertimos a cadena tipo "clave=valor&clave=valor..."
+        });
+
+        // Convertimos la respuesta en JSON
         const data = await response.json();
+
+        // Mostramos las opciones en pantalla
         mostrarOpciones(data);
+
       } catch (error) {
+        // Si hay error, mostramos mensaje
         console.error("Error al obtener opciones de coches:", error);
         document.getElementById("resultado").innerText = "Ocurrió un error al buscar coches.";
       }
     }
 
+    // Función que muestra las opciones recibidas en el DOM
     function mostrarOpciones(data) {
       const contenedor = document.getElementById("resultado");
-      contenedor.innerHTML = "";
+      contenedor.innerHTML = ""; // Limpiamos resultado anterior
 
+      // Si no hay coches, mostramos mensaje vacío
       if (!data?.opciones || data.opciones.length === 0) {
         contenedor.textContent = "No se encontraron coches con esas características, lo siento.";
         return;
       }
 
+      // Recorremos y mostramos cada coche encontrado
       data.opciones.forEach(coche => {
         const div = document.createElement("div");
         div.innerHTML = `
