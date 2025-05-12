@@ -1,0 +1,22 @@
+<!DOCTYPE JavaScript>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 4.1 Apartado 2</title>
+    </head>
+    <body>
+        <script> //Apartado 2
+            "use strict";
+            let array1 = [], par = 0, impar = 0;
+            while (true) {
+                let input = prompt("Ingresa un número (0 o valor no numérico para terminar):");
+                if (input == '0' || isNaN(input)) break;
+                let numero = +input;  // Convertir el input a número directamente
+                array1.push(numero);
+                (numero % 2 == 0) ? par++ : impar++;  // Contabilizar par o impar
+            }
+            document.write("Array de entrada: " + array1 + "<br>");
+            document.write("Pares: " + par + ", Impares: " + impar);
+        </script>
+    </body>
+</html>

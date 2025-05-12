@@ -1,0 +1,26 @@
+<!DOCTYPE JavaScript>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 4.1</title>
+    </head>
+    <body>
+        <script> //Apartado 1
+            "use strict"
+            let array = [];
+            let longitud = 100;
+            let suma = 0;
+            for (let i=0; i<longitud; i++)
+            {
+            array [i] = i;
+            for (let j=0; j<array.length; j++)
+            {
+                suma += array[j];
+            }
+            }
+            document.write("Números que contiene el array: " + array);
+            document.write("<br/>");
+            document.write("La suma de los números es: " + suma);
+        </script>
+    </body>
+</html>

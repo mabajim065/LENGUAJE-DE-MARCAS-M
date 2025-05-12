@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Ejemplo</title>
+    <script>
+        $(document).ready(function(){
+        $("div").hover(function(){
+            $(this).css("background-color", "lightblue");
+            }, function(){
+            $(this).css("background-color", "pink");
+        });
+        });
+        </script>
+</head>
+<body>
+    <div id="caja">
+        <p class="impar">Este es un ejemplo de JavaScript 1</p>
+        <p class="par">Este es un ejemplo de JavaScript 2</p>
+        <p class="impar">Este es un ejemplo de JavaScript 3</p>
+        <p class="par">Este es un ejemplo de JavaScript 4</p>
+    </div>
+</body>
+</html>

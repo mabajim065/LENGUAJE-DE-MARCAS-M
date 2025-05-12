@@ -1,0 +1,68 @@
+<!DOCTYPE JavaScript>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Funciones</title>
+    </head>
+    <body>
+        <script> //Funciones
+            "use strict"
+            //Funcion que devuelve el valor de la suma de números, el numero mayor, 
+            // el numero menor y la multipllicación de los dos números de todos los números del array.
+            //Que pida al usuario que ingrese númeroslos almacene en un array.
+            let array = [];
+            for (let i=0; i<10; i++)
+            {
+                let input = prompt("Ingresa un número (para parar ingresa s): ");
+                if (input == 'S' || isNaN(input)) break;
+                array.push(+input);
+            }
+            function suma(){
+                let suma = 0;
+                for (let i=0; i<array.length; i++)
+                {
+                    suma += array[i];
+                }
+                return suma;
+            }
+            function mayor(){
+                let mayor = array[0];
+                for (let i=0; i<array.length; i++)
+                {
+                    if (array[i] > mayor)
+                    {
+                        mayor = array[i];
+                    }
+                }
+                return mayor;
+            }
+            function menor(){
+                let menor = array[0];
+                for (let i=0; i<array.length; i++)
+                {
+                    if (array[i] < menor)
+                    {
+                        menor = array[i];
+                    }
+                }
+                return menor;
+            }
+            function multiplicacion(){
+                let multiplicacion = 1;
+                for (let i=0; i<array.length; i++)
+                {
+                    multiplicacion *= array[i];
+                }
+                return multiplicacion;
+            }
+            document.write("Array de entrada: " + array + "<br>");
+            document.write("Suma: " + suma(array));
+            document.write("<br/>");
+            document.write("Mayor: " + mayor(array));
+            document.write("<br/>");
+            document.write("Menor: " + menor(array));
+            document.write("<br/>");
+            document.write("Multiplicación: " + multiplicacion(array));
+        </script>
+    </body>
+</html>
