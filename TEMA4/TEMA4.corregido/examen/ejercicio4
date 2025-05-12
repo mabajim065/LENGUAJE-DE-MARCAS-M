@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio4</title>
+    <spcript type="text/JavaScript"></spcript>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="ejercicio4.js"></script>
+    <script> </script>
+</head>
+<body>
+    <p id="contenido_1">[1]Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam dictum hendrerit neque. Mauris id ligula non elit mattis semper. Fusce arcu ipsum, tempus eget, tincidunt at, imperdiet in, mi. Donec velit neque, egestas sit amet, lacinia in, cursus in, nisi. Nullam eget nisl. Quisque ut neque. Sed eget enim. Curabitur sit amet nisl.</p>
+    <a id="enlace_1" href="#">Ocultar contenido</a>
+    <br/>
+    <p id="contenido_2">[2]Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam dictum hendrerit neque. Mauris id ligula non elit mattis semper. Fusce arcu ipsum, tempus eget, tincidunt at, imperdiet in, mi. Donec velit neque, egestas sit amet, lacinia in, cursus in, nisi. Nullam eget nisl. Quisque ut neque. Sed eget enim. Curabitur sit amet nisl.</p>
+    <a id="enlace_2" href="#">Ocultar contenido</a>
+    <br/>
+    <p id="contenido_3">[3]Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam dictum hendrerit neque. Mauris id ligula non elit mattis semper. Fusce arcu ipsum, tempus eget, tincidunt at, imperdiet in, mi. Donec velit neque, egestas sit amet, lacinia in, cursus in, nisi. Nullam eget nisl. Quisque ut neque. Sed eget enim. Curabitur sit amet nisl.</p>
+    <a id="enlace_3" href="#">Ocultar contenido</a>
+</body>
+</html>

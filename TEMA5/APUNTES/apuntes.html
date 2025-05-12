@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes Completos sobre JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        pre {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .important {
+            background-color: #ffeeba;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📌 Apuntes Completos sobre JSON (JavaScript Object Notation)</h1>
+
+<div class="section">
+    <h2>✅ ¿Qué es JSON?</h2>
+    <p>JSON (JavaScript Object Notation) es un formato ligero y eficiente para el intercambio de datos entre sistemas. Es fácil de leer y escribir para los humanos, y fácil de analizar y generar para las máquinas. Se utiliza principalmente para enviar y recibir datos entre servidores y aplicaciones web.</p>
+</div>
+
+<div class="section">
+    <h2>📂 Estructura de un Objeto JSON</h2>
+    <pre><code>{
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid"
+}</code></pre>
+</div>
+
+<div class="section">
+    <h2>🔍 Tipos de Valores en JSON</h2>
+    <ul>
+        <li>📌 <b>Cadenas de texto (String):</b> "Juan"</li>
+        <li>🔢 <b>Números (Number):</b> 30, 45.67</li>
+        <li>🔄 <b>Booleanos (Boolean):</b> true o false</li>
+        <li>📋 <b>Arrays:</b> ["rojo", "verde", "azul"]</li>
+        <li>🔎 <b>Objetos (Object):</b> {"calle": "Calle Falsa 123", "ciudad": "Madrid"}</li>
+        <li>❌ <b>Nulo (null):</b> Representa la ausencia de valor.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>⚠️ Reglas de Sintaxis en JSON</h2>
+    <div class="important">
+        <ul>
+            <li>Las claves <b>SIEMPRE</b> llevan comillas dobles (<code>""</code>).</li>
+            <li>No se permite una coma al final de un objeto o array.</li>
+            <li>No se permiten comentarios en JSON.</li>
+            <li>Las claves deben ser únicas dentro del mismo nivel.</li>
+            <li>No se aceptan valores <code>undefined</code> (a diferencia de JavaScript).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>🚀 Ejemplos Prácticos de JSON</h2>
+    <pre><code>{
+    "empleados": [
+        {
+            "id": 1,
+            "nombre": "Juan",
+            "puesto": "Gerente"
+        },
+        {
+            "id": 2,
+            "nombre": "Ana",
+            "puesto": "Desarrolladora"
+        }
+    ]
+}</code></pre>
+    <pre><code>{
+    "empresa": {
+        "nombre": "Tech Corp",
+        "direccion": {
+            "calle": "Av. Central 123",
+            "ciudad": "Madrid"
+        },
+        "empleados": [
+            {
+                "id": 1,
+                "nombre": "Juan",
+                "puesto": "Gerente"
+            },
+            {
+                "id": 2,
+                "nombre": "Ana",
+                "puesto": "Desarrolladora"
+            }
+        ]
+    }
+}</code></pre>
+</div>
+
+<div class="section">
+    <h2>✨ Ventajas de Usar JSON</h2>
+    <ul>
+        <li>Ligereza: JSON es más ligero y rápido que otros formatos como XML.</li>
+        <li>Fácil de leer y escribir: Su sintaxis simple y directa lo hace fácil de trabajar para los desarrolladores.</li>
+        <li>Compatibilidad entre plataformas: JSON es compatible con casi todos los lenguajes de programación.</li>
+        <li>Rendimiento: JSON se analiza y procesa más rápido que otros formatos como XML.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>🔥 Errores Comunes en JSON</h2>
+    <ul>
+        <li>Falta de comillas dobles en las claves o valores de texto.</li>
+        <li>Comas extra después del último elemento de un objeto o array.</li>
+        <li>Uso de comillas simples en lugar de dobles para claves o valores.</li>
+    </ul>
+</div>
+
+</body>
+</html>

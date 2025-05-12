@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio2</title>
+<spcript type="text/JavaScript"></spcript>
+<script src="jquery-3.7.1.min.js"></script>
+</head>
+<script>
+    //<!--Se desea escribir un programa que pregunte al usuario hasta que la tabla de mulitiplicar quiere escribir.
+    //el programa escribara las tablas de multiplicar (1 a 10) del numero ingresado por el usuario.-->
+    let numero= prompt("Ingresa el numero de tablas numero");
+    for (let i=1; i<=numero; i++)
+        for(let j=1;j<=10;j++)
+{
+        if(numero>10) break;
+        document.write(i);
+        document.write(" x ");
+        document.write(j);
+        document.write(" = ");
+        document.write(i*j);
+        document.write("<br/>");
+    }
+</script>
+<body>
+</body>

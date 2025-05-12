@@ -1,0 +1,28 @@
+//Esperaremos hasta que el documento esté cargado y listo para ser procesado por nuestro programa*/
+let obj_documento = $(document)
+/* Cuando esté cargado ejecutaremos La función cuyo nombre aparezca aqui*/
+obj_documento.ready(muestraOculta)
+
+function muestraOculta(){
+    let obj_en1=$("#enlace_1")
+    obj_en1.click (fn_click_en1)
+    let obj_en2=$("#enlace_2")
+    obj_en2.click (fn_click_en2)
+    let obj_en3=$("#enlace_3")
+    obj_en3.click (fn_click_en3)
+}
+
+function fn_click_en1(){
+    let obj_div=$ ("#contenido_1")
+    obj_div.fadeOut()
+}
+
+function fn_click_en2(){
+    let obj_div=$("#contenido_2")
+    obj_div.fadeOut()
+}
+
+function fn_click_en3(){
+    let obj_div=$("#contenido_3")
+    obj_div.fadeOut()
+}
