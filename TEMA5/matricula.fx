@@ -5,7 +5,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
-public class MatriculaEntrenadoraApp extends Application {
+public class MatriculaEntrenadora extends Application {
 
     @Override
     public void start(Stage primaryStage) {
@@ -34,10 +34,12 @@ public class MatriculaEntrenadoraApp extends Application {
         errorLabel.setStyle("-fx-text-fill: red;");
 
         calcularButton.setOnAction(e -> {
-            errorLabel.setText(""); // Limpiamos el error por si había uno antes.
+            errorLabel.setText(""); // pa porsi hay error de antes
+
+            // Calculamos el precio base según las horas seleccionadas (20€ la hora).
             double precio = horasSemanales.getValue() * 20.0;
 
-            // Si es antiguo alumno, se aplica un 35% de descuento.
+            // Si esta en la fag ps hay un 35 de descuento
             if (afiliadoFAG.isSelected()) {
                 precio *= 0.65;
             }
