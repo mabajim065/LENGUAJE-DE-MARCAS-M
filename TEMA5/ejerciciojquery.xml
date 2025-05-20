@@ -1,0 +1,57 @@
+<bookstore>
+  <book category="COOKING">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+  ...
+</bookstore>
+
+for $b in /bookstore/book <!-- ESTO SIRVE PA RECORRER LOS LIBROS -->
+return <libro>{concat($b/title, " (", count($b/author), ")")}</libro> <!-- CONCAT PARA UNIR Y RETURN PARA Q LO DEVUELVA  -->
+
+for $b in /bookstore/book <!-- ESTO SIRVE PA RECORRER LOS LIBROS -->
+where substring($b/year, string-length($b/year)) = "3" <!-- ESTO SIRVE PARA SACAR EL AÑO -->
+return $b 
+
+for $b in /bookstore/book <!-- ESTO SIRVE PA RECORRER LOS LIBROS -->
+where $b/price > 35.00 <!-- ESTO SIRVE PARA SACAR EL PRECIO -->
+where starts-with($b/@category, "C") <!-- ESTO SIRVE PARA SACAR LA CATEGORIA -->
+return $b <!-- ESTO SIRVE PARA DEVOLVER EL LIBRO -->
+
+for $b in /bookstore/book <!-- ESTO SIRVE PA RECORRER LOS LIBROS -->
+where $b/price > 35.00 <!-- ESTO SIRVE PARA SACAR EL PRECIO -->
+where starts-with($b/@category, "C") <!-- ESTO SIRVE PARA SACAR LA CATEGORIA -->
+where contains(lower-case($b/title), "x") <!-- ESTO SIRVE PARA SACAR EL TITULO -->
+order by $b/title descending <!-- ORDENAR POR EL TITULO -->
+return $b
+
+for $b in /bookstore/book <
+return
+  <titulo>
+    <nombre>{$b/title}</nombre>
+    <longitud>{string-length($b/title)}</longitud>
+  </titulo>
+
+  for $a in distinct-values(/bookstore/book/year)
+return <año>{$a}</año>
+
+for $a in distinct-values(/bookstore/book/author)
+order by string-length($a)
+return <autor>{$a}</autor>
+
+
+<html>
+  <body>
+    <table border="1">
+      {
+        for $b in /bookstore/book
+        return
+          <tr>
+            <td>{$b/title}</td>
+          </tr>
+      }
+    </table>
+  </body>
+</html>
