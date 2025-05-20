@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrícula Flexible - Curso de Entrenadora</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    .grupo { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+    label { display: block; margin-bottom: 8px; }
+    #resultado { margin-top: 20px; font-weight: bold; color: #1a73e8; }
+    #error { color: red; font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Matrícula Flexible - Curso de Entrenadora</h2>
+  <form id="formulario">
+    <div class="grupo">
+      <h3>Asignaturas del curso de entrenadora</h3>
+      <label><input type="checkbox" id="comportamientoDeportivo" name="asignatura" value="MED-C101"> MED-C101: Bases del comportamiento deportivo (20 horas)</label>
+      <label><input type="checkbox" id="primerosAuxiliosI" name="asignatura" value="MED-C102-I"> MED-C102-I: Primeros Auxilios I (30 horas)</label>
+      <label><input type="checkbox" id="primerosAuxiliosII" name="asignatura" value="MED-C102-II"> MED-C102-II: Primeros Auxilios II (30 horas)</label>
+      <label><input type="checkbox" id="actividadAdaptada" name="asignatura" value="MED-C103"> MED-C103: Actividad física adaptada y discapacidad (5 horas)</label>
+      <label><input type="checkbox" id="organizacionDeportiva" name="asignatura" value="MED-C104"> MED-C104: Organización Deportiva</label>
+    </div>
+    <div class="grupo">
+      <label>Horas semanales: <input type="number" id="horas" min="1" max="40" value="1"></label>
+    </div>
+    <div class="grupo">
+      <label><input type="checkbox" id="afiliadoFAG"> Afiliado al FAG</label>
+      <label><input type="checkbox" id="beca"> Beca</label>
+    </div>
+    <button type="submit">Calcular Precio</button>
+  </form>
+  <div id="error"></div>
+  <div id="resultado"></div>
+
+  <script>
+    // Lógica para que no se puedan seleccionar ambos "Primeros Auxilios I" y "Primeros Auxilios II"
+    document.getElementById("primerosAuxiliosI").addEventListener("change", function() {
+      if (this.checked) {
+        document.getElementById("primerosAuxiliosII").checked = false;
+        document.getElementById("primerosAuxiliosII").disabled = true;
+      } else {
+        document.getElementById("primerosAuxiliosII").disabled = false;
+      }
+    });
+    document.getElementById("primerosAuxiliosII").addEventListener("change", function() {
+      if (this.checked) {
+        document.getElementById("primerosAuxiliosI").checked = false;
+        document.getElementById("primerosAuxiliosI").disabled = true;
+      } else {
+        document.getElementById("primerosAuxiliosI").disabled = false;
+      }
+    });
+
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("error").textContent = "";
+      document.getElementById("resultado").textContent = "";
+
+      // Recoger asignaturas seleccionadas
+      const asignaturas = [
+        document.getElementById("comportamientoDeportivo").checked,
+        document.getElementById("primerosAuxiliosI").checked,
+        document.getElementById("primerosAuxiliosII").checked,
+        document.getElementById("actividadAdaptada").checked,
+        document.getElementById("organizacionDeportiva").checked
+      ];
+      const algunaAsignatura = asignaturas.some(x => x);
+
+      if (!algunaAsignatura) {
+        document.getElementById("error").textContent = "Debes seleccionar al menos una asignatura.";
+        return;
+      }
+
+      // Comprobación extra por si el usuario manipula el HTML y selecciona ambos
+      if (document.getElementById("primerosAuxiliosI").checked && document.getElementById("primerosAuxiliosII").checked) {
+        document.getElementById("error").textContent = "No puedes seleccionar Primeros Auxilios I y II a la vez.";
+        return;
+      }
+
+      // Horas semanales
+      const horas = parseInt(document.getElementById("horas").value, 10);
+      if (isNaN(horas) || horas < 1) {
+        document.getElementById("error").textContent = "Introduce un número de horas válido.";
+        return;
+      }
+
+      // Precio base (más caro, por ejemplo 50€ por hora)
+      let precio = horas * 50;
+
+      // Descuento afiliado al FAG (35%)
+      if (document.getElementById("afiliadoFAG").checked) {
+        precio *= 0.65;
+      }
+
+      // Precio con beca (20% del total)
+      let precioBeca = document.getElementById("beca").checked ? precio * 0.2 : precio;
+
+      // Mostrar resultados
+      document.getElementById("resultado").innerHTML =
+        `Total: <span>${precio.toFixed(2)} €</span><br>
+         Con Beca: <span>${precioBeca.toFixed(2)} €</span>`;
+    });
+  </script>
+</body>
+</html>
