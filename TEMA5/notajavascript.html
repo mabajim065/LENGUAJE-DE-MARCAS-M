@@ -8,7 +8,7 @@
     .grupo { margin-bottom: 15px; }
     label { display: block; margin-bottom: 5px; }
     input[type="number"], select { width: 100%; padding: 6px; }
-    button { padding: 8px 16px; }
+    button { padding: 8px 16px; cursor: pointer; }
     #resultado { margin-top: 15px; font-weight: bold; color: #1a73e8; }
   </style>
 </head>
@@ -22,39 +22,46 @@
     <div class="grupo">
       <label for="tiempo">¿Cuánto has tardado en entregar?</label>
       <select id="tiempo" required>
-        <option value="1h">1 hora (Ole, no te resta nada)</option>
-        <option value="12h">12 horas (Bueno, resta -0,1 por cada pregunta fallada)</option>
-        <option value="1d">1 día (Lo siento, resta -0,2 por cada preguntafallada)</option>
-        <option value="+1d">Más de 1 día (Lo siento, resta -0,3 por no haber entregado eta tarea)</option>
+        <option value="1h">1 hora (No resta nada)</option>
+        <option value="12h">12 horas (Resta 0.1 por cada pregunta fallada)</option>
+        <option value="+1d">Más de 1 día (Resta 0.3 por cada pregunta fallada)</option>
       </select>
     </div>
     <button type="submit">Calcular Nota</button>
   </form>
   <div id="resultado"></div>
 
-  <script>
-    document.getElementById("formulario").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const acertadas = parseInt(document.getElementById("acertadas").value, 10);
-      const total = 27;
-      const tiempo = document.getElementById("tiempo").value;
-      let penalizacion = 0;
+<script>
+  document.getElementById("formulario").addEventListener("submit", function(e) {
+    e.preventDefault(); // Evita que el formulario se envíe y la página se recargue
 
-    
+    const acertadas = parseInt(document.getElementById("acertadas").value, 10);
+    const totalPreguntas = 27;
+    const tiempoEntrega = document.getElementById("tiempo").value;
 
-      if (tiempo === "1h") penalizacion = 0;
-      else if (tiempo === "12h") penalizacion = 0.1;
-      else if (tiempo === "1d") penalizacion = 0.2;
-      else if (tiempo === "+1d") penalizacion = 0.3;
+    let penalizacionPorFallo = 0;
 
-      
+    // Asigna la penalización según el tiempo de entrega
+    if (tiempoEntrega === "1h") {
+      penalizacionPorFallo = 0;
+    } else if (tiempoEntrega === "12h") {
+      penalizacionPorFallo = 0.1;
+    } else if (tiempoEntrega === "+1d") {
+      penalizacionPorFallo = 0.3;
+    }
 
+    const falladas = totalPreguntas - acertadas;
+    const penalizacionTotal = falladas * penalizacionPorFallo;
 
-      const falladas = total - acertadas;
-      const nota =( acertadas - (falladas * penalizacion))*10/27;
+    let notaFinal = (acertadas / totalPreguntas) * 10 - penalizacionTotal;
 
-      document.getElementById("resultado").textContent = `Tu nota final es: ${nota.toFixed(2)}`;
-    });
-  </script>
+   
+    if (notaFinal < 0) {
+      notaFinal = 0;
+    }
+
+    document.getElementById("resultado").textContent = `Tu nota final es: ${notaFinal.toFixed(2)}`;
+  });
+</script>
 </body>
 </html>
