@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Nota Examen JavaScript</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 400px; margin: auto; padding: 20px; }
+    .grupo { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; }
+    input[type="number"], select { width: 100%; padding: 6px; }
+    button { padding: 8px 16px; }
+    #resultado { margin-top: 15px; font-weight: bold; color: #1a73e8; }
+  </style>
+</head>
+<body>
+  <h2>Calculadora de Nota Examen JavaScript</h2>
+  <form id="formulario">
+    <div class="grupo">
+      <label for="acertadas">¿Cuántas preguntas de 27 has acertado?</label>
+      <input type="number" id="acertadas" min="0" max="27" required>
+    </div>
+    <div class="grupo">
+      <label for="tiempo">¿Cuánto has tardado en entregar?</label>
+      <select id="tiempo" required>
+        <option value="1h">1 hora (Ole, no te resta nada)</option>
+        <option value="12h">12 horas (Bueno, resta -0,1 por cada pregunta fallada)</option>
+        <option value="1d">1 día (Lo siento, resta -0,2 por cada preguntafallada)</option>
+        <option value="+1d">Más de 1 día (Lo siento, resta -0,3 por no haber entregado eta tarea)</option>
+      </select>
+    </div>
+    <button type="submit">Calcular Nota</button>
+  </form>
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const acertadas = parseInt(document.getElementById("acertadas").value, 10);
+      const total = 27;
+      const tiempo = document.getElementById("tiempo").value;
+      let penalizacion = 0;
+
+    
+
+      if (tiempo === "1h") penalizacion = 0;
+      else if (tiempo === "12h") penalizacion = 0.1;
+      else if (tiempo === "1d") penalizacion = 0.2;
+      else if (tiempo === "+1d") penalizacion = 0.3;
+
+      
+
+
+      const falladas = total - acertadas;
+      const nota =( acertadas - (falladas * penalizacion))*10/27;
+
+      document.getElementById("resultado").textContent = `Tu nota final es: ${nota.toFixed(2)}`;
+    });
+  </script>
+</body>
+</html>
