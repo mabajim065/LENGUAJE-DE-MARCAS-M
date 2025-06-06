@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Prebenjamín",
+        "edades": "6-7 años"
+    },
+    {
+        "nombre": "Benjamín",
+        "edades": "8-9 años"
+    },
+    {
+        "nombre": "Alevín",
+        "edades": "10-11 años"
+    },
+    {
+        "nombre": "Infantil",
+        "edades": "12-13 años"
+    },
+    {
+        "nombre": "Junior",
+        "edades": "14-15 años"
+    },
+    {
+        "nombre": "Senior",
+        "edades": "16+ años"
+    }
+]

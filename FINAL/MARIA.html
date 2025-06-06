@@ -4,121 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gimnasia Rítmica</title>
-    <link rel="stylesheet" href="MARIA.css"> </head>
+    <link rel="stylesheet" href="MARIA.css">
+</head>
 <body>
-
     <header>
-        <div class="logo-container">
-            <h1>GIMNASIA RÍTMICA</h1>
-            <div class="logo">logo</div>
-        </div>
+        <h1>GIMNASIA RÍTMICA</h1>
+        <div class="logo">
+            <img src="logo.jpg" alt="Cuerda">
+        </div> 
     </header>
 
     <main>
-        <section class="info-section">
+        <section id="que-es-gimnasia">
             <h2>¿Qué es la gimnasia rítmica?</h2>
-            <p>boceto maria,boceto maria,boceto maria, boceto maria,boceto maria,boceto maria boceto maria,boceto maria,boceto maria boceto maria,boceto maria,boceto maria</p>
-        </section>
+            <p>La gimnasia rítmica es una disciplina deportiva que combina elementos de ballet, gimnasia y danza con el uso de aparatos como la cuerda, el aro, la pelota, las mazas y la cinta. Se caracteriza por la belleza, la gracia y la expresividad de sus movimientos, realizados al ritmo de la música. Es un deporte que exige gran flexibilidad, coordinación, fuerza y un sentido artístico desarrollado.</p>
+            </section>
 
-        <section class="apparatus-section">
+        <section id="aparatos-utilizan">
             <h2>Aparatos que se utilizan</h2>
-            <div class="images-container">
-                <div class="image-wrapper">
-                    <img src="placeholder.png" alt="Aparato 1">
-                    <span class="image-name">Nombre Aparato 1</span> </div>
-                <div class="image-wrapper">
-                    <img src="placeholder.png" alt="Aparato 2">
-                    <span class="image-name">Nombre Aparato 2</span>
+            <div class="aparatos-container">
+                <div class="aparato">
+                    <img src="cuerda.jpg" alt="Cuerda">
+                    <span class="Cuerda">Cuerda</span>
                 </div>
-                <div class="image-wrapper">
-                    <img src="placeholder.png" alt="Aparato 3">
-                    <span class="image-name">Nombre Aparato 3</span>
+                <div class="aparato">
+                    <img src="aro.jpg" alt="Aro">
+                    <span class="Aro">Aro</span>
                 </div>
-                <div class="image-wrapper">
-                    <img src="placeholder.png" alt="Aparato 4">
-                    <span class="image-name">Nombre Aparato 4</span>
+                <div class="aparato">
+                    <img src="pelota.jpg" alt="Pelota">
+                    <span class="Pelota">Pelota</span>
                 </div>
-                <div class="image-wrapper">
-                    <img src="placeholder.png" alt="Aparato 5">
-                    <span class="image-name">Nombre Aparato 5</span>
+                <div class="aparato">
+                    <img src="mazas.jpg" alt="Mazas">
+                    <span class="Mazas">Mazas</span>
+                </div>
+                <div class="aparato">
+                    <img src="cinta.jpg" alt="Cinta">
+                    <span class="Cinta">Cinta</span>
                 </div>
             </div>
         </section>
 
-        <section class="professionals-section">
-            <h2>Conoce a nuestras Profesionales</h2>
-            <div class="professionals-container">
-                <div class="professional-card">
-                    <img src="placeholder_profesional.png" alt="Foto Profesional 1" class="professional-photo">
-                    <p class="professional-name">Nombre</p>
-                    <p class="professional-age">Edad</p>
-                </div>
-                <div class="professional-card">
-                    <img src="placeholder_profesional.png" alt="Foto Profesional 2" class="professional-photo">
-                    <p class="professional-name">Nombre</p>
-                    <p class="professional-age">Edad</p>
-                </div>
-                </div>
+        <section id="piramide-container">
+        <h2>Niveles de Gimnasia Rítmica</h2>
+        <div class="piramide">
+            <!-- Nivel más alto / Cima de la pirámide -->
+            <!-- Para editar el texto, simplemente cambia el contenido entre las etiquetas <div> -->
+            <div class="nivel nivel-cima">Primera Categoría</div>
+            <div class="nivel nivel-absoluto">Absoluto</div>
+            <div class="nivel nivel-base">Base</div>
+            <div class="nivel nivel-copa">Copa</div>
+            <div class="nivel nivel-precopa">Precopa</div>
+            <div class="nivel nivel-promesa">Promesa</div>
+            <!-- Nivel más bajo / Base de la pirámide -->
+            <div class="nivel nivel-escuela">Iniciación/Escuela</div>
+        </div>
+    </div>
         </section>
 
-        <section class="inscription-section">
-            <h2>Inscripcion</h2>
-            <form id="inscriptionForm">
-                <div class="form-group">
-                    <label for="salutation">Salutation:</label>
-                    <select id="salutation" name="salutation">
-                        <option value="">--Please choose an option--</option>
-                        <option value="Mr">Mr.</option>
-                        <option value="Ms">Ms.</option>
-                        <option value="Mx">Mx.</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Gender:</label>
-                    <input type="radio" id="male" name="gender" value="Male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="Female">
-                    <label for="female">Female</label>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="dob">Date of Birth (dd/mm/yyyy):</label>
-                    <input type="date" id="dob" name="dob" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="address">Address:</label>
-                    <textarea id="address" name="address" rows="3"></textarea>
-                </div>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-        <section class="contact-section">
-            <h2>Contacto</h2>
-            <p>(datos de contacto y esas cosillas)</p>
+        <section id="categoria">
+            <h2>Categoría</h2>
+            <table id="tabla-categorias">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nombre de la Categoría</th>
+                        <th>Edades</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
-        </footer>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Número de teléfono: 673-472-459</p>
+            <p><a href="https://www.instagram.com/mariaajiimenez_" target="_blank">Instagram</a></p>
+            <p><a href="https://www.facebook.com/mariaajiimenez_" target="_blank">Facebook</a></p>
+            <p><a href="https://wa.me/673472459" target="_blank">WhatsApp</a></p>
+        </section>
+        <p class="copyright">copyright &copy; María Abascal Jiménez 2025</p> 
+    </footer>
 
-    <script src="MARIA.js"></script> </body>
+    <script src="MARIA.js"></script>
+</body>
 </html>
