@@ -146,7 +146,6 @@ h2 {
     transform: translateY(0);
 }
 
-/* Estilos para la Pirámide (ejemplo básico con CSS) */
 /* Contenedor de la pirámide que organiza los niveles. */
         .piramide {
             /* Permite usar Flexbox para organizar los niveles. */
