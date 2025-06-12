@@ -105,9 +105,9 @@ h2 {
 /* Estilos para cada elemento individual de aparato*/
 .aparato {
     /* Ancho fijo para cada aparato. */
-    width: 150px;
+    width: 100px;
     /* Altura fija para cada aparato. */
-    height: 150px;
+    height: 100px;
     
     /* Redondea las esquinas del contenedor. */
     border-radius: 10px;
@@ -133,7 +133,6 @@ h2 {
 }
 
 
-
 /* Contenedor de la pirámide que organiza los niveles. */
         .piramide {
             /* Permite usar Flexbox para organizar los niveles. */
@@ -149,23 +148,23 @@ h2 {
         /* Estilos para cada div que representa un nivel individual dentro de la pirámide. */
         .piramide .nivel {
             /* Color de fondo base para los niveles, un rosa pastel. */
-            background-color: #FFC0CB; /* Rosa pastel base */
+            background-color: #FFC0CB; 
             /* Borde alrededor de cada nivel, un rosa medio. */
-            border: 1px solid #FF69B4; /* Borde rosa medio */
+            border: 1px solid #FF69B4; 
             /* Espaciado interno para el texto dentro del nivel. */
             padding: 10px;
             /* Centra el texto horizontalmente. */
             text-align: center;
             /* Margen inferior para separar los niveles. */
             margin-bottom: 8px;
-            /* Incluye el padding y el borde en el ancho/alto total del elemento. */
+            /* Incluye el padding y el borde en el ancho y alto total del elemento. */
             box-sizing: border-box;
             /* Redondea ligeramente las esquinas. */
             border-radius: 5px;
             /* Texto en negrita. */
             font-weight: bold;
             /* Color del texto, un tono púrpura/magenta oscuro para elegancia. */
-            color: #6A1B9A; /* Tono púrpura/magenta oscuro */
+            color: #6A1B9A; 
             /* Transición suave para todos los cambios de propiedades (ej. al hacer hover). */
             transition: all 0.3s ease-in-out;
             /* Altura mínima para asegurar que los niveles tengan un tamaño consistente. */
