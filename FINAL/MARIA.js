@@ -1,6 +1,7 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Datos de las categorías (antes estaban en categorias.json)
+    // 1. Datos de las categorías que son objetos con nombre y edades
     const categoriasGimnasia = [
         {
             "nombre": "premini",
@@ -33,16 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // 2. Cargar datos de Categorías en la tabla
+    // Seleccionamos el tbody de la tabla donde se añadirán las filas
     const tablacategorias = document.querySelector('#tabla-categorias tbody');
 
-    if (tablacategorias) { // Asegurarse de que la tabla existe en el HTML
+    // Comprobamos si la tabla existe antes de continuar
+    if (tablacategorias) {
+        // Recorro to el array y lo va poniendo en filas y celdas
         categoriasGimnasia.forEach((categoria, index) => {
-            const row = tablacategorias.insertRow();
-            row.insertCell().textContent = index + 1; // Número de fila
-            row.insertCell().textContent = categoria.nombre;
-            row.insertCell().textContent = categoria.edades;
+            const row = tablacategorias.insertRow(); // Crea una nueva fila
+            row.insertCell().textContent = index + 1; 
+            row.insertCell().textContent = categoria.nombre; 
+            row.insertCell().textContent = categoria.edades; 
         });
     } else {
+        // Si no encuentra la tabla
         console.error("No se encontró el elemento con ID 'tabla-categorias' o su tbody en el DOM.");
     }
 });
