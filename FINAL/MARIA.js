@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     } else {
         // Si no encuentra la tabla
-        console.error("No se encontró el elemento con ID 'tabla-categorias' o su tbody en el DOM.");
+        console.error("no se ha encontrado el elemento.");
     }
 });

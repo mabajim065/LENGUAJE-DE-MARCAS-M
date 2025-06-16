@@ -25,12 +25,11 @@ header {
     justify-content: space-between;
     /* Alinea los elementos verticalmente al centro. */
     align-items: center;
+    
 }
 
 /* Estilos para el título principal (h1) dentro del encabezado */
 header h1 {
-    /* Elimina el margen */
-    margin: 0;
     /* tamaño texto */
     font-size: 2.2em;
 }
@@ -173,8 +172,7 @@ h2 {
             display: flex;
             justify-content: center;
             align-items: center;
-            /* El cursor predeterminado, no indica interactividad a menos que se agregue. */
-            cursor: default;
+            
         }
 
         /* Elimina el margen inferior del último nivel para evitar espacio extra. */
@@ -182,8 +180,7 @@ h2 {
             margin-bottom: 0;
         }
 
-        /* Estilos específicos para cada nivel de la pirámide (de arriba a abajo),
-           controlando su ancho y color para crear la forma triangular y la paleta de rosas. */
+      
 
         /* Nivel más alto / Cima de la pirámide */
         .piramide .nivel-cima {
@@ -257,18 +254,7 @@ h2 {
             h2 {
                 font-size: 1.5em;
             }
-            .piramide .nivel {
-                font-size: 0.9em; /* Reduce el tamaño de fuente en pantallas pequeñas */
-                padding: 8px;
-            }
-            /* Ajusta los anchos si es necesario para mantener la forma en móviles */
-            .piramide .nivel-cima { width: 40%; }
-            .piramide .nivel-absoluto { width: 50%; }
-            .piramide .nivel-base { width: 60%; }
-            .piramide .nivel-copa { width: 70%; }
-            .piramide .nivel-precopa { width: 80%; }
-            .piramide .nivel-promesa { width: 90%; }
-            .piramide .nivel-escuela { width: 100%; }
+            
         }
 
 
@@ -331,9 +317,9 @@ footer {
     /* Centra el texto horizontalmente. */
     text-align: center;
     /* Espaciado interno. */
-    padding: 25px; /* Un poco más de padding */
+    padding: 25px; 
     /* Margen superior para separar el pie de página del contenido principal. */
-    margin-top: 50px; /* Un poco más de espacio */
+    margin-top: 50px; 
     /* Bordes redondeados en la parte superior del footer */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -343,11 +329,11 @@ footer {
 /* Estilos para los enlaces (a) dentro del pie de página */
 footer a {
     /* Color de los enlaces, un rosa vivo que contraste con el fondo oscuro. */
-    color: #FFB6C1; /* Rosa claro vibrante */
+    color: #FFB6C1;
     /* Elimina el subrayado predeterminado de los enlaces. */
     text-decoration: none;
     /* Margen a cada lado de los enlaces para separarlos. */
-    margin: 0 12px; /* Un poco más de separación */
+    margin: 0 12px;
     /* Transición suave para el efecto hover */
     transition: color 0.3s ease-in-out;
 }
