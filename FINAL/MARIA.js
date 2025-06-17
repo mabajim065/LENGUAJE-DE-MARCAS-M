@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Datos de las categorías que son objetos con nombre y edades
     const categoriasGimnasia = [
+        
         {
             "nombre": "premini",
             "edades": "3-5 años"

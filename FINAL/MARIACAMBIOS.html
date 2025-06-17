@@ -76,13 +76,28 @@
     </main>
 
     <footer>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Número de teléfono: 673-472-459</p>
-            <p><a href="https://www.instagram.com/mariaajiimenez_" target="_blank">Instagram</a></p>
-            <p><a href="https://www.facebook.com/mariaajiimenez_" target="_blank">Facebook</a></p>
-            <p><a href="https://wa.me/673472459" target="_blank">WhatsApp</a></p>
-        </section>
+    <section id="formulario">
+    <h2>Formulario para apuntarte</h2>
+    <form action="#" method="post">
+        
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" id="apellidos" name="apellidos" required><br><br>
+
+        <label>Categoría:</label><br>
+        <label><input type="checkbox" name="categorias[]" value="Primera Categoría"> Primera Categoría</label><br>
+        <label><input type="checkbox" name="categorias[]" value="Absoluto"> Absoluto</label><br>
+        <label><input type="checkbox" name="categorias[]" value="Base"> Base</label><br>
+        <label><input type="checkbox" name="categorias[]" value="Copa"> Copa</label><br>
+        <label><input type="checkbox" name="categorias[]" value="Precopa"> Precopa</label><br>
+        <label><input type="checkbox" name="categorias[]" value="Promesa"> Promesa</label><br>
+        <label><input type="checkbox" name="categorias[]" value="Iniciación/Escuela"> Iniciación / Escuela</label><br><br>
+
+        <button type="reset">Enviar</button>
+    </form>
+</section>
         <p class="copyright">copyright &copy; María Abascal Jiménez 2025</p> 
     </footer>
 

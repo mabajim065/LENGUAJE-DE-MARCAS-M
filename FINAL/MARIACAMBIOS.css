@@ -11,8 +11,13 @@ body {
 
 /* Estilos para el encabezado (header) de la página */
 header {
+   
     /* Color de fondo*/
-    background-color: #333; 
+    /* propiedades para la imagen de fondo */
+   background-image: url('yo.jpg');
+   background-repeat: no-repeat ; /* No repetir la imagen */
+    background-size: cover; /* Cubrir todo el espacio del encabezado */
+    margin-top : -20px;
     /* Color del texto */
     color: #E91E63;
     /* Espaciado interno en todos los lados. */
@@ -27,6 +32,8 @@ header {
     align-items: center;
     
 }
+
+
 
 /* Estilos para el título principal (h1) dentro del encabezado */
 header h1 {
@@ -263,17 +270,13 @@ h2 {
     text-transform: uppercase;
     font-weight: bold;
 }
-
-/* Estilos para las filas pares del cuerpo de la tabla (para un efecto de cebra) */
-#tabla-categorias tbody tr:nth-child(even) {
-    background-color: #FAE5EB;
+/* Estilos para las filas del cuerpo de la tabla */
+#tabla-categorias tbody tr:nth-child(odd) {
+    background-color: white;
 }
-
-/* Estilos para las filas del cuerpo de la tabla cuando el ratón pasa por encima */
-#tabla-categorias tbody tr:hover {
-    background-color: #FFECF1;
-    /* Sombra al pasar el ratón */
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+/* Estilos para las filas del cuerpo de la tabla en números pares */
+#tabla-categorias tbody tr:nth-child(even) {
+    background-color: #d9d9d9;
 }
 
 /* Estilos para el pie de página (footer) */
