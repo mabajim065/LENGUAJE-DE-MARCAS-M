@@ -11,14 +11,14 @@
         <h1>GIMNASIA RÍTMICA</h1>
         <div class="logo">
             <img src="logo.jpg" alt="Cuerda">
-        </div> 
+        </div>
     </header>
 
     <main>
         <section id="que-es-gimnasia">
             <h2>¿Qué es la gimnasia rítmica?</h2>
             <p>La gimnasia rítmica es una disciplina deportiva que combina elementos de ballet, gimnasia y danza con el uso de aparatos como la cuerda, el aro, la pelota, las mazas y la cinta. Se caracteriza por la belleza, la gracia y la expresividad de sus movimientos, realizados al ritmo de la música. Es un deporte que exige gran flexibilidad, coordinación, fuerza y un sentido artístico desarrollado.</p>
-            </section>
+        </section>
 
         <section id="aparatos-utilizan">
             <h2>Aparatos que se utilizan</h2>
@@ -47,17 +47,16 @@
         </section>
 
         <section id="piramide-container">
-        <h2>Niveles de Gimnasia Rítmica</h2>
-        <div class="piramide">
-            <div class="nivel nivel-cima">Primera Categoría</div>
-            <div class="nivel nivel-absoluto">Absoluto</div>
-            <div class="nivel nivel-base">Base</div>
-            <div class="nivel nivel-copa">Copa</div>
-            <div class="nivel nivel-precopa">Precopa</div>
-            <div class="nivel nivel-promesa">Promesa</div>
-            <div class="nivel nivel-escuela">Iniciación/Escuela</div>
-        </div>
-    </div>
+            <h2>Niveles de Gimnasia Rítmica</h2>
+            <div class="piramide">
+                <div class="nivel nivel-cima">Primera Categoría</div>
+                <div class="nivel nivel-absoluto">Absoluto</div>
+                <div class="nivel nivel-base">Base</div>
+                <div class="nivel nivel-copa">Copa</div>
+                <div class="nivel nivel-precopa">Precopa</div>
+                <div class="nivel nivel-promesa">Promesa</div>
+                <div class="nivel nivel-escuela">Iniciación/Escuela</div>
+            </div>
         </section>
 
         <section id="categoria">
@@ -68,37 +67,56 @@
                         <th>Num</th>
                         <th>Nombre de la Categoría</th>
                         <th>Edades</th>
-                        </tr>
+                    </tr>
                 </thead>
-                <tbody> </tbody>
+                <tbody>
+                </tbody>
             </table>
         </section>
+
+        <section id="contacto">
+            <h2>Cuestionario de Contacto</h2>
+            <form id="formulario-contacto">
+                <label for="nombre-contacto">Nombre:</label><br>
+                <input type="text" id="nombre-contacto" name="nombreContacto" required><br><br>
+
+                <label for="apellidos-contacto">Apellidos:</label><br>
+                <input type="text" id="apellidos-contacto" name="apellidosContacto" required><br><br>
+
+                <label for="email-contacto">Correo Electrónico:</label><br>
+                <input type="email" id="email-contacto" name="emailContacto" required><br>
+                <span id="email-error" class="error-message">Por favor, introduce un correo electrónico válido (debe contener '@').</span><br>
+
+                <label for="telefono-contacto">Número de Teléfono:</label><br>
+                <input type="tel" id="telefono-contacto" name="telefonoContacto" required><br>
+                <span id="telefono-error" class="error-message">Por favor, introduce un número de teléfono válido (9 cifras).</span><br><br>
+
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+            <p id="mensaje-envio" class="success-message">Su solicitud fue enviada, le llamaremos en breve.</p>
+        </section>
+
     </main>
 
     <footer>
-    <section id="formulario">
-    <h2>Formulario para apuntarte</h2>
-    <form action="#" method="post">
-        
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-
-        <label for="apellidos">Apellidos:</label><br>
-        <input type="text" id="apellidos" name="apellidos" required><br><br>
-
-        <label>Categoría:</label><br>
-        <label><input type="checkbox" name="categorias[]" value="Primera Categoría"> Primera Categoría</label><br>
-        <label><input type="checkbox" name="categorias[]" value="Absoluto"> Absoluto</label><br>
-        <label><input type="checkbox" name="categorias[]" value="Base"> Base</label><br>
-        <label><input type="checkbox" name="categorias[]" value="Copa"> Copa</label><br>
-        <label><input type="checkbox" name="categorias[]" value="Precopa"> Precopa</label><br>
-        <label><input type="checkbox" name="categorias[]" value="Promesa"> Promesa</label><br>
-        <label><input type="checkbox" name="categorias[]" value="Iniciación/Escuela"> Iniciación / Escuela</label><br><br>
-
-        <button type="reset">Enviar</button>
-    </form>
-</section>
-        <p class="copyright">copyright &copy; María Abascal Jiménez 2025</p> 
+        <section id="redes-sociales">
+            <h2>Síguenos en Redes Sociales</h2>
+            <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                  
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                  
+                    <span>Instagram</span>
+                </a>
+                <a href="https://wa.me/numerodetelefono" target="_blank" aria-label=" WhatsApp">
+               
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </section>
+        <p class="copyright">copyright &copy; María Abascal Jiménez 2025</p>
     </footer>
 
     <script src="MARIACAMBIOS.js"></script>

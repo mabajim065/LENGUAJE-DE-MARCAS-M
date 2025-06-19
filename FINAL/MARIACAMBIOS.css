@@ -1,17 +1,17 @@
 /* Estilos generales para todo el cuerpo de la página */
 body {
     /* tipo de letra */
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Arial', sans-serif;
     /*color de fondo */
     background-color: #FDF0F3; /* Rosa pastel muy sutil */
     /*color de texto */
     color: #333;
-    
+
 }
 
 /* Estilos para el encabezado (header) de la página */
 header {
-   
+
     /* Color de fondo*/
     /* propiedades para la imagen de fondo */
    background-image: url('yo.jpg');
@@ -30,7 +30,7 @@ header {
     justify-content: space-between;
     /* Alinea los elementos verticalmente al centro. */
     align-items: center;
-    
+
 }
 
 
@@ -44,11 +44,11 @@ header h1 {
 /* Estilos para 'logo' */
 .logo {
     /* Establece un ancho fijo para el contenedor del logo. */
-    width: 80px; 
+    width: 80px;
     /* pone una altura fija para el contenedor del logo. */
-    height: 80px; 
+    height: 80px;
     /* ponerla redondita */
-    border-radius: 50%; 
+    border-radius: 50%;
     /*centrar*/
     justify-content: center;
     align-items: center;
@@ -65,12 +65,12 @@ header h1 {
 
 /* Estilos para el contenido principal (main) */
 main {
-    /* Espaciado interno  en todos los lados. */
+    /* Espaciado interno en todos los lados. */
     padding: 20px;
     /* Centra el bloque principal horizontalmente y le da un margen superior y inferior de 20px. */
     margin: 20px auto;
     /* Color de fondo */
-    background-color: #F8E2E8; 
+    background-color: #F8E2E8;
 }
 
 /* Estilos para cada sección de la página */
@@ -84,9 +84,9 @@ section {
 /* Estilos para los subtítulos (h2) de cada sección */
 h2 {
     /* Color para los subtítulos */
-    color: #C2185B; 
+    color: #C2185B;
     /* Borde inferior para decorar el subtítulo */
-    border-bottom: 2px solid #F06292; 
+    border-bottom: 2px solid #F06292;
     /* Espaciado interno en la parte inferior para separar el texto del borde. */
     padding-bottom: 10px;
     /* Margen inferior para separar el subtítulo del contenido siguiente. */
@@ -103,7 +103,7 @@ h2 {
     display: flex;
     /* organiza todo el espacio de alrededor de forma equitatuiva*/
     justify-content: space-around;
- 
+
     /* Espacio entre los elementos */
     gap: 20px;
 }
@@ -114,7 +114,7 @@ h2 {
     width: 100px;
     /* Altura fija para cada aparato. */
     height: 100px;
-    
+
     /* Redondea las esquinas del contenedor. */
     border-radius: 10px;
     /* Cambia el cursor a una mano al pasar por encima, indicando que es interactivo. */
@@ -154,9 +154,9 @@ h2 {
         /* estilo para cada nivel */
         .piramide .nivel {
             /* Color de fondo base para los niveles, un rosa pastel. */
-            background-color: #FFC0CB; 
+            background-color: #FFC0CB;
             /* Borde alrededor de cada nivel, un rosa medio. */
-            border: 1px solid #FF69B4; 
+            border: 1px solid #FF69B4;
             /* Espaciado interno para el texto dentro del nivel. */
             padding: 10px;
             /* Centra el texto horizontalmente. */
@@ -169,7 +169,7 @@ h2 {
             border-radius: 5px;
             /* Texto en negrita. */
             font-weight: bold;
-            color: #6A1B9A; 
+            color: #6A1B9A;
             /* Transición suave para todos los cambios de propiedades  */
             transition: all 0.3s ease-in-out;
             /* Altura mínima para asegurar que los niveles tengan un tamaño consistente. */
@@ -178,7 +178,7 @@ h2 {
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
         }
 
         /* Elimina el margen inferior del último nivel para evitar espacio extra. */
@@ -186,13 +186,13 @@ h2 {
             margin-bottom: 0;
         }
 
-      
+
 
         /* Nivel más alto */
         .piramide .nivel-cima {
             /* Ancho más estrecho para la punta de la pirámide. */
             width: 30%;
-            background-color: #F8BBD0; 
+            background-color: #F8BBD0;
             color: #4A148C; /* Púrpura oscuro */
             /* Tamaño de fuente ligeramente más grande. */
             font-size: 1.1em;
@@ -200,45 +200,45 @@ h2 {
 
         .piramide .nivel-absoluto {
             width: 40%;
-            background-color: #F48FB1; 
+            background-color: #F48FB1;
             color: #6A1B9A;
         }
 
         .piramide .nivel-base {
             width: 50%;
-            background-color: #F06292; 
+            background-color: #F06292;
             color: #880E4F;
         }
 
         .piramide .nivel-copa {
             width: 60%;
-            background-color: #EC407A; 
+            background-color: #EC407A;
             color: white;
         }
 
         .piramide .nivel-precopa {
             width: 75%;
-            background-color: #E91E63; 
-            color: white; 
+            background-color: #E91E63;
+            color: white;
         }
 
         .piramide .nivel-promesa {
             width: 85%;
-            background-color: #D81B60; 
-            color: white; 
+            background-color: #D81B60;
+            color: white;
         }
 
         /* Nivel más bajo , base de la pirámide */
         .piramide .nivel-escuela {
             /* Ancho más ancho para la base de la pirámide. */
             width: 95%;
-         
+
             background-color: #C2185B;
             color: white;
             font-size: 1.2em;
         }
 
-    
+
 /* Estilos para la Tabla de Categorías */
 #tabla-categorias {
     /* La tabla ocupa el 100% del ancho disponible. */
@@ -279,6 +279,79 @@ h2 {
     background-color: #d9d9d9;
 }
 
+/* Nuevos estilos para el Cuestionario de Contacto */
+#contacto form {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 0 auto; /* Centra el formulario */
+}
+
+#contacto label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #C2185B;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto input[type="tel"] {
+    width: calc(100% - 20px); /* Resta el padding para que no se desborde */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #FFC0CB;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contacto input[type="text"]:focus,
+#contacto input[type="email"]:focus,
+#contacto input[type="tel"]:focus {
+    border-color: #E91E63;
+    outline: none;
+    box-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
+}
+
+#contacto button[type="submit"] {
+    background-color: #E91E63;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: #C2185B;
+}
+
+.error-message {
+    color: #D32F2F; /* Rojo oscuro para errores */
+    font-size: 0.9em;
+    margin-top: -10px; /* Ajustar margen para que esté más cerca del input */
+    margin-bottom: 10px;
+    display: none; /* Oculto por defecto */
+}
+
+.success-message {
+    color: #4CAF50; /* Verde para mensajes de éxito */
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #E8F5E9; /* Fondo verde claro */
+    border: 1px solid #81C784; /* Borde verde */
+    border-radius: 8px;
+    display: none; /* Oculto por defecto */
+}
+
 /* Estilos para el pie de página (footer) */
 footer {
     /* Color de fondo oscuro para el pie de página. */
@@ -288,7 +361,7 @@ footer {
     /* Centra el texto horizontalmente. */
     text-align: center;
     /* Espaciado interno. */
-    padding: 25px; 
+    padding: 25px;
     /* Margen superior para separar el pie de página del contenido principal. */
     margin-top: 50px;
 }
